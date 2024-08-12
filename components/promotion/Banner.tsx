@@ -8,7 +8,7 @@ export default function Banner() {
     /* background */
     <div className="bg-slate-400 text-white">
       {/*container */}
-      <div className="max-w-7xl mx-auto py-6 px-4 flex flex-col justify-between md:flex-row items-center">
+      <div className="max-w-7xl mx-auto mb-6 pl-4 flex flex-col justify-between md:flex-row items-center">
         {/* content */}
         <div className="mb-8 md:mb-0">
           <h2 className="text-2xl font-bold mb-2">Special Offer</h2>
@@ -17,7 +17,9 @@ export default function Banner() {
             <Button>Shop Now</Button>
           </Link>
         </div>
-        <Image src="" alt="Special offer" width={500} height={500} />
+        <div >
+          <Image src="/placeHolder.jpg" alt="Special offer" width={400} height={300} />
+        </div>
       </div>
     </div>
   );
