@@ -1,26 +1,27 @@
-"use client";
-import Link from "next/link";
+
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export default function Banner() {
-  return (
-    /* background */
-    <div className="bg-slate-400 text-white">
-      {/*container */}
-      <div className="max-w-7xl mx-auto mb-6 pl-4 flex flex-col justify-between md:flex-row items-center">
-        {/* content */}
-        <div className="mb-8 md:mb-0">
-          <h2 className="text-2xl font-bold mb-2">Special Offer</h2>
-          <p className="text-lg mb-4">Get 50% off on all products</p>
-          <Link href="/promotion">
-            <Button>Shop Now</Button>
-          </Link>
-        </div>
-        <div >
-          <Image src="/placeHolder.jpg" alt="Special offer" width={400} height={300} />
+    return (
+      <div className="relative bg-slate-400 h-[300px] overflow-hidden">
+        <Image
+          src="/placeHolder.jpg"
+          alt="Special offer background"
+          layout="fill"
+          objectFit="cover"
+          className="absolute z-0"
+        />
+        <div className="relative z-10 max-w-7xl mx-auto h-full py-6 px-4 flex justify-start ">
+          <div className="max-w-md">
+            <h2 className="text-2xl font-bold mb-2">Special Offer</h2>
+            <p className="text-lg mb-4">Get 50% off on all products</p>
+            <Link href="/promotion">
+              <Button>Shop Now</Button>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }

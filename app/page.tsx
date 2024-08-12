@@ -1,18 +1,31 @@
+"use client"
 
 import NavBar from "@/components/navigation/NavBar";
-import ThirdBanner from "@/components/promotion/ThirdBanner";
+import Banner from "@/components/promotion/Banner";
 import ProductsList from "@/components/products/ProductsList";
-import SecondBanner from "@/components/promotion/SecondBanner";
+import Banner3 from "@/components/promotion/Banner3";
+import Banner2 from "@/components/promotion/Banner2";
+
 import Footer from "@/components/footer/Footer";
 
+
+
+
+
+
+
+
+
+
 export default function Home() {
+  
   return (
     <main>
       <NavBar />
-      <ThirdBanner />
-
+      <Banner />
       <ProductsList />
-      <SecondBanner />
+      <Banner3 />
+      <Banner2 />
       <Footer />
     </main>
   );
