@@ -1,6 +1,5 @@
 "use client"
 
-import NavBar from "@/components/navigation/NavBar";
 import Banner from "@/components/promotion/Banner";
 import Categories from "@/components/categories/Categories";
 import ProductsList from "@/components/products/ProductsList";
@@ -14,10 +13,8 @@ export default function Home() {
   
   return (
     <main>
-      <NavBar />
       <Banner />
       <Categories />
-
       <ProductsList />
       <Banner3 />
       <Banner2 />
