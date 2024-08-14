@@ -16,9 +16,7 @@ export default function Home() {
       <Banner />
       <Categories />
       <ProductsList />
-      <Banner3 />
       <Banner2 />
-      <Footer />
     </main>
   );
 }

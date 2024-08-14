@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import SearchBar from "./SearchBar";
 import Cart from "@/components/cart/Cart";
 // import Test from "@/components/cart/Test";
@@ -12,9 +13,11 @@ const NavBar = () => {
   return (
     <header>
       <nav className="max-w-7xl mx-auto flex justify-between items-center ">
-        <div className="flex mx-4">
-          <Image src="/next.svg" alt="logo" width={100} height={100} />
-        </div>
+        <Link href="/">
+          <div className="flex mx-4">
+            <Image src="/next.svg" alt="logo" width={100} height={100} />
+          </div>
+        </Link>
         <div className="hidden sm:flex mx-4 flex-grow justify-end">
           <SearchBar className="w-1/2" />
         </div>
