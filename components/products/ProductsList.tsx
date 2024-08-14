@@ -5,7 +5,7 @@ import ProductCard from "./ProductCard";
 
 export default function ProductsList() {
   return (
-    <div className="bg-gray-100 text-black font-bold" >
+    <div className=" text-black font-bold" >
       <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between pb-4">
             <h1 className="text-2xl font-semibold pb-2">Products</h1>
