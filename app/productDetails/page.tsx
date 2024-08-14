@@ -1,11 +1,13 @@
 'use client'
-
-import ProductDetails from '@/components/products/ProductDetails'
+import React from 'react';
+import ProductDetails from '@/components/products/ProductDetails';
+import ShippingInfo from '@/components/products/ShippingInfo';
 
 export default function ProductDetailsPage() {
     return (
-        <div className="bg-slate-100">
+        <div className='my-10'>
             <ProductDetails />
+            <ShippingInfo />
         </div>
     )
     
