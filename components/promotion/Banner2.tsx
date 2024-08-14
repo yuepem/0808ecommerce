@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button";
 export default function Banner() {
   return (
     /* background */
-    <div className="bg-slate-400 text-white">
+    <div className="bg-stone-100 text-black">
       {/*container */}
-      <div className="max-w-7xl mx-auto mb-6 pl-4 flex flex-col justify-between sm:flex-row items-center">
+      <div className="max-w-7xl mx-auto pl-4 py-6 flex flex-col justify-between sm:flex-row items-center">
         {/* content */}
         <div className="mb-8 md:mb-0">
           <h2 className="text-2xl font-bold mb-2">Special Offer</h2>

@@ -27,7 +27,7 @@ export default function CateBar() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className=" sm:absolute bottom-4 left-24 right-24 flex justify-center gap-4">
+      <div className=" max-lg:absolute bottom-4 left-24 right-24 ">
         <CarouselPrevious />
         <CarouselNext />
       </div>
