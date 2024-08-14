@@ -28,7 +28,9 @@ const NavBar = () => {
               size={24}
               onClick={() => setIsCartOpen(true)}
             />
-            <UserIcon className="hover:cursor-pointer m-1" size={24} />
+            <Link href="/userProfile">
+              <UserIcon className="hover:cursor-pointer m-1" size={24} />
+            </Link>
             <Cart isOpen={isCartOpen} setIsOpen={setIsCartOpen} />
             {/* <Test isOpen={isCartOpen} setIsOpen={setIsCartOpen}/> */}
           </ul>
