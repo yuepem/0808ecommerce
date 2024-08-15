@@ -3,7 +3,23 @@ import React from "react";
 // import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import ProductCarousel from "./ProductCarousel";
-import ProductInformation from "./ProductInformation";
+import AccordionComponent from "@/components/ui/AccordionComponent";
+
+//Mock data for Product Information
+const productInfo = [
+  {
+      question: "Is it accessible?",
+      answer: "Yes. It adheres to the WAI-ARIA design pattern."
+  },
+  {
+      question: "Is it styled?",
+      answer: "Yes. It comes with default styles that matches the other components' aesthetic."
+  },
+  {
+      question: "Is it animated?",
+      answer: "Yes. It's animated by default, but you can disable it if you prefer."
+  }
+]
 
 export default function ProductDetails() {
   return (
@@ -30,7 +46,8 @@ export default function ProductDetails() {
             <Button className="w-4/5 my-auto rounded-full sm:w-1/2 md:w-1/3  ">Add to Cart</Button>
           </div>
           <div className="font-normal text-sm">
-            <ProductInformation />
+            {/* <ProductInformation /> */}
+            <AccordionComponent data={productInfo} />
           </div>
         </div>
       </div>

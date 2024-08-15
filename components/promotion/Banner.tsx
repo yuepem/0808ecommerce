@@ -18,7 +18,7 @@ export default function Banner() {
             <h2 className="text-2xl font-bold mb-2">Special Offer</h2>
             <p className="text-lg mb-4">Get 50% off on all products</p>
             <Link href="/promotion">
-              <Button>Shop Now</Button>
+              <Button>Learn More</Button>
             </Link>
           </div>
         </div>
