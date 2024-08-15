@@ -9,7 +9,7 @@ import Banner2 from "@/components/promotion/Banner2";
 export default function Home() {
   
   return (
-    <main>
+    <main >
       <Banner />
       <Categories />
       <ProductsList />

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { Dialog, DialogBackdrop, DialogPanel } from "@headlessui/react";
 import CartItemCard from "@/components/cart/CartItemCard";
 import { Button } from "@/components/ui/button";
@@ -48,7 +49,9 @@ export default function Cart({
                   <p className="text-sm font-medium">$159.00</p>
                 </div>
                 <div className="flex justify-center">
-                  <Button className="w-3/4">Checkout</Button>
+                  <Link href="/checkout" className="w-full">
+                    <Button className="w-full" onClick={() => setIsOpen(false)}>Checkout</Button>
+                  </Link>
                 </div>
               </div>
             </div>
