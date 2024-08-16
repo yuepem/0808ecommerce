@@ -1,6 +1,7 @@
 "use client";
 import React, {useState} from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link"; 
 
 export default function CheckoutForm() {
     const [formData, setFormData] = useState({
@@ -59,7 +60,9 @@ export default function CheckoutForm() {
           </div>
         </div>
         <div className="w-full mb-6">
+          <Link href="/checkout/confirmation">
             <Button type="submit" className="w-full">Place Order</Button>
+          </Link>
         </div>
       </form>
     </div>
