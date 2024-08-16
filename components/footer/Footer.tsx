@@ -1,5 +1,7 @@
 'use client';
 import React from "react";
+import Link from "next/link";
+
 
 
 const Footer = () => {
@@ -16,7 +18,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><a href="#" className="text-black hover:text-gray-500 hover:font-semibold">Home</a></li>
               <li><a href="#" className="text-black hover:text-gray-500 hover:font-semibold">Products</a></li>
-              <li><a href="#" className="text-black hover:text-gray-500 hover:font-semibold">About</a></li>
+              <li><Link href="/about" className="text-black hover:text-gray-500 hover:font-semibold">About</Link></li>
               <li><a href="#" className="text-black hover:text-gray-500 hover:font-semibold">Contact</a></li>
             </ul>
           </div>
