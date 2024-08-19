@@ -1,38 +1,72 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { ShoppingCart, Minus, Plus } from "lucide-react";
 
 export default function ProductCard() {
+  const [isInCart, setIsInCart] = useState(false);
+  const [quantity, setQuantity] = useState(0);
+
+  const handleAddToCart = () => {
+    setIsInCart(true);
+    setQuantity(1);
+  };
+
+  const handleIncrement = () => {
+    setQuantity((prev) => prev + 1);
+  };
+
+  const handleDecrement = () => {
+    if (quantity > 1) {
+      setQuantity((prev) => prev - 1);
+    } else {
+      setQuantity(0);
+      setIsInCart(false);
+    }
+  };
+
   return (
-    <div className="flex flex-col gap-4 border-2 border-black rounded-md">
-      <Link href="/productDetails">
-        <div className="bg-gray-200">
+    <div className="flex flex-col gap-4  border-black rounded-lg">
+      <Link href="/products">
+        <div className="bg-stone-100 rounded-md">
           <Image src="" alt="product" width={300} height={200} />
         </div>
-        <div className="bg-gray-400">
-          <h3>Product Name</h3>
-          <p>Product Price</p>
-        </div>
-        <div className="flex flex-row-reverse gap-4 justify-between place-items-center bg-gray-600">
-          <div>
-            <Button>
-              <ShoppingCart size={20} />
-            </Button>
-          </div>
-          <div className="flex gap-4 place-items-center">
-            <Button>
-              <Minus size={20} />
-            </Button>
-            <span className="text-white ">1</span>
-            <Button>
-              <Plus size={20} />
-            </Button>
-          </div>
+        <div>
+          <h3 className="mt-4 text-sm  text-gray-700">Product Name</h3>
+          <p className="mt-1 text-sm font-medium text-gray-900">
+            $ 89
+          </p>
         </div>
       </Link>
+      <div className=" flex flex-row-reverse justify-between items-center ">
+        {!isInCart ? (
+          <div>
+            <button
+              className="p-2 text-black rounded-full hover:bg-stone-200 hover:text-black"
+              onClick={handleAddToCart}
+            >
+              <ShoppingCart size={20} />
+            </button>
+          </div>
+        ) : (
+          <div className="flex items-center space-x-3 p-1">
+            <button
+              onClick={handleDecrement}
+              className="p-1 bg-stone-200 rounded"
+            >
+              <Minus size={18} />
+            </button>
+            <span className="w-2 text-center font-light">{quantity}</span>
+            <button
+              onClick={handleIncrement}
+              className="p-1 bg-stone-200 rounded"
+            >
+              <Plus size={18} />
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
