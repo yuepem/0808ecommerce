@@ -6,6 +6,17 @@ import CartItemCard from "@/components/cart/CartItemCard";
 import { Button } from "@/components/ui/button";
 import { X as CloseIcon } from "lucide-react";
 
+import useCartStore from "@/stores/cartStore";
+
+/* interface CartItem {
+  id: string;
+  image: string; 
+  name: string;
+  price: number;
+  quantity: number;
+} */
+
+
 export default function Cart({
   isOpen,
   setIsOpen,
@@ -13,6 +24,8 @@ export default function Cart({
   isOpen: boolean;
   setIsOpen: (isCartOpen: boolean) => void;
 }) {
+  const { items, getTotalPrice } = useCartStore();
+
   return (
     <>
       <Dialog
@@ -38,15 +51,17 @@ export default function Cart({
                 </button>
               </div>
               <div className="flex flex-col gap-2 ">
-                <CartItemCard />
-                <CartItemCard />
-                <CartItemCard />
+                {
+                  items.map((item) => (
+                    <CartItemCard key={item.id} item={item} />
+                  ))
+                }
               </div>
               <hr className="border-t border-gray-400" />
               <div className="flex flex-col gap-4">
                 <div className="flex justify-between items-center px-2">
                   <h3 className="text-sm font-medium">Subtotal</h3>
-                  <p className="text-sm font-medium">$159.00</p>
+                  <p className="text-sm font-medium">{getTotalPrice().toFixed(2)} kr</p>
                 </div>
                 <div className="flex justify-center">
                   <Link href="/checkout" className="w-full">

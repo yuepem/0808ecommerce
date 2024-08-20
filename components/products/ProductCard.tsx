@@ -1,28 +1,36 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart, Minus, Plus } from "lucide-react";
 
-export default function ProductCard() {
-  const [isInCart, setIsInCart] = useState(false);
+//States
+import  useCartStore  from "@/stores/cartStore";
+
+export default function ProductCard(product: any) {
+  const { items, addToCart, removeFromCart, updateQuantity } = useCartStore();
+
   const [quantity, setQuantity] = useState(0);
 
+  useEffect(() => {
+    // check if the product is in the cart
+    const cartItem = items.find((item) => item.id === product.id);
+    setQuantity(cartItem ? cartItem.quantity : 0);
+  }, [items, product.id]);
+
   const handleAddToCart = () => {
-    setIsInCart(true);
-    setQuantity(1);
+    addToCart(product);
   };
 
   const handleIncrement = () => {
-    setQuantity((prev) => prev + 1);
+    updateQuantity(product.id, quantity + 1);
   };
 
   const handleDecrement = () => {
     if (quantity > 1) {
-      setQuantity((prev) => prev - 1);
+      updateQuantity(product.id, quantity - 1);
     } else {
-      setQuantity(0);
-      setIsInCart(false);
+      removeFromCart(product.id);
     }
   };
 
@@ -33,14 +41,14 @@ export default function ProductCard() {
           <Image src="" alt="product" width={300} height={200} />
         </div>
         <div>
-          <h3 className="mt-4 text-sm  text-gray-700">Product Name</h3>
+          <h3 className="mt-4 text-sm  text-gray-700">{product.name}</h3>
           <p className="mt-1 text-sm font-medium text-gray-900">
-            $ 89
+            $ {product.price.toFixed(2)} kr
           </p>
         </div>
       </Link>
       <div className=" flex flex-row-reverse justify-between items-center ">
-        {!isInCart ? (
+        {quantity === 0 ? (
           <div>
             <button
               className="p-2 text-black rounded-full hover:bg-stone-200 hover:text-black"
