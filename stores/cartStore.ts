@@ -6,18 +6,18 @@ import { persist, createJSONStorage } from "zustand/middleware";
 interface CartItem {
   id: string;
   name: string;
-//   cartId: string;
-//   productId: string;
+  //   cartId: string;
+  //   productId: string;
   price: number;
   quantity: number;
 }
 
 interface CartStore {
-  /* State */
+  // * state
   items: CartItem[];
 
   /* Actions */
-  addToCart: (item: CartItem) => void;
+  addToCart: (item: { id: string; name: string; price: number }) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
@@ -33,6 +33,7 @@ const useCartStore = create<CartStore>()(
       addToCart: (item) =>
         set((state) => {
           const existingItem = state.items.find((i) => i.id === item.id);
+
           if (existingItem) {
             return {
               items: state.items.map((i) =>
@@ -40,7 +41,17 @@ const useCartStore = create<CartStore>()(
               ),
             };
           }
-          return { items: [...state.items, { ...item, quantity: 1 }] };
+          return {
+            items: [
+              ...state.items,
+              {
+                id: item.id,
+                name: item.name,
+                price: item.price,
+                quantity: 1,
+              },
+            ],
+          };
         }),
 
       removeFromCart: (id) =>
@@ -73,6 +84,5 @@ const useCartStore = create<CartStore>()(
     }
   )
 );
-
 
 export default useCartStore;

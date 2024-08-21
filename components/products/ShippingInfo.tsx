@@ -21,7 +21,7 @@ export default function ShippingInfo() {
           </div>
           <div >
             <h2 className="font-semibold">Secure Payments</h2>
-            <p className="font-light text-sm">Safe and reliable payment methodss</p>
+            <p className="font-light text-sm">Safe and reliable payment methods</p>
           </div>
         </div>
         <div className="flex items-center gap-2 px-2 sm:flex-col sm:items-start md:flex-row ">

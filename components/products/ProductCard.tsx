@@ -1,22 +1,17 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ShoppingCart, Minus, Plus } from "lucide-react";
 
 //States
-import  useCartStore  from "@/stores/cartStore";
+import useCartStore from "@/stores/cartStore";
 
 export default function ProductCard(product: any) {
   const { items, addToCart, removeFromCart, updateQuantity } = useCartStore();
 
-  const [quantity, setQuantity] = useState(0);
-
-  useEffect(() => {
-    // check if the product is in the cart
-    const cartItem = items.find((item) => item.id === product.id);
-    setQuantity(cartItem ? cartItem.quantity : 0);
-  }, [items, product.id]);
+  const cartItem = items.find((item) => item.id === product.id);
+  const quantity = cartItem ? cartItem.quantity : 0;
 
   const handleAddToCart = () => {
     addToCart(product);
@@ -36,7 +31,7 @@ export default function ProductCard(product: any) {
 
   return (
     <div className="flex flex-col gap-4  border-black rounded-lg">
-      <Link href="/products">
+      <Link href="/products/{product.id}">
         <div className="bg-stone-100 rounded-md">
           <Image src="" alt="product" width={300} height={200} />
         </div>

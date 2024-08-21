@@ -11,7 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export default function CateBar() {
+export default function CateBar(image: any) {
   return (
     <Carousel className="w-full max-w-xs relative pb-10">
       <CarouselContent>

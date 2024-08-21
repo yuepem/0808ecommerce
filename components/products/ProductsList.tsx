@@ -3,8 +3,10 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
-// ! products is an array of products, from the useProductStore 
+
+// * products is an array of products, from the useProductStore 
 export default function ProductsList({ products }: any) {
+  
   return (
     <div className=" text-black font-bold">
       <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
