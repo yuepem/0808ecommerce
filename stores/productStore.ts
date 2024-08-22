@@ -1,58 +1,25 @@
-import { allowedNodeEnvironmentFlags } from "process";
+"use client";
 import { create } from "zustand";
 
-// ! mockData
-const mockProducts: Product[] = [
-  {
-    id: 1,
-    name: "Laptop",
-    description: "Powerful laptop for work",
-    price: 999.99,
-    stock: 50,
-    categoryId: 1,
-  },
-  {
-    id: 2,
-    name: "Smartphone",
-    description: "Latest model smartphone",
-    price: 699.99,
-    stock: 100,
-    categoryId: 1,
-  },
-  {
-    id: 3,
-    name: "Headphones",
-    description: "Noise-cancelling headphones",
-    price: 199.99,
-    stock: 75,
-    categoryId: 1,
-  },
-  {
-    id: 4,
-    name: "T-shirt",
-    description: "Comfortable cotton t-shirt",
-    price: 19.99,
-    stock: 200,
-    categoryId: 2,
-  },
-  {
-    id: 5,
-    name: "Jeans",
-    description: "Classic blue jeans",
-    price: 49.99,
-    stock: 150,
-    categoryId: 2,
-  },
-  // Add more mock products as needed
-];
+/* * import mockData for testing */
+import categoryDATA from "@/dataForTesting/categoryDATA";
+import productData from "@/dataForTesting/productData";
+
+// * mockData
+const mockProducts = productData;
 
 interface Product {
-  id: number;
+  id: string;
   name: string;
   description: string;
-  price: number;
+  price: string;
   stock: number;
-  categoryId: number;
+  category_id: number;
+  imageUrl: string;
+  featuredType: string;
+  accordion: { question: string; answer: string; }[];
+  created_at: string;
+  updated_at: string;
 }
 
 interface ProductStore {
@@ -62,13 +29,13 @@ interface ProductStore {
   error: string | null;
   fetchHomeProducts: () => void;
   fetchProductsByCategory: (categoryId: number) => void;
-  fetchRelatedProducts: (productId: number) => void;
+  fetchRelatedProducts: (productId: string) => void;
   searchProducts: (query: string) => void;
   //* for admin
   // addProduct: (product: Product) => void;
   // updateProduct: (id: number, updates: Partial<Product>) => void;
   // deleteProduct: (id: number) => void;
-  getProductById: (id: number) => Product | undefined;
+  getProductById: (id: string) => Product | undefined;
 }
 
 const useProductStore = create<ProductStore>()((set, get) => ({
@@ -80,14 +47,14 @@ const useProductStore = create<ProductStore>()((set, get) => ({
   // actions
   fetchHomeProducts: () => {
     set({ 
-      products: mockProducts.slice(0, 4), // Assume first 4 products for homepage
+      products: mockProducts.slice(0, 15), 
       loading: false, 
       error: null 
     });
   },
 
   fetchProductsByCategory: (categoryId: number) => {
-    const categoryProducts = mockProducts.filter(p => p.categoryId === categoryId);
+    const categoryProducts = mockProducts.filter(p => p.category_id === categoryId);
     set({
       products: categoryProducts,
       loading: false,
@@ -95,15 +62,15 @@ const useProductStore = create<ProductStore>()((set, get) => ({
     });
   },
 
-  fetchRelatedProducts: (productId: number) => {
+  fetchRelatedProducts: (productId: string) => {
     const product = get().getProductById(productId);
     const products = mockProducts.filter(
-      (p) => p.categoryId === product?.categoryId
+      (p) => p.category_id === product?.category_id
     );
     set({ relatedProducts: products, loading: false, error: null });
   },
 
-  getProductById: (id: number) => {
+  getProductById: (id: string) => {
     return mockProducts.find((product) => product.id === id);
   },
 

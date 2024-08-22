@@ -3,12 +3,13 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 
+
 interface CartItem {
   id: string;
   name: string;
-  //   cartId: string;
+  // cartId: string;
   //   productId: string;
-  price: number;
+  price: string;
   quantity: number;
 }
 
@@ -17,7 +18,7 @@ interface CartStore {
   items: CartItem[];
 
   /* Actions */
-  addToCart: (item: { id: string; name: string; price: number }) => void;
+  addToCart: (item: { id: string; name: string; price: string }) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
@@ -75,7 +76,7 @@ const useCartStore = create<CartStore>()(
 
       getTotalPrice: () => {
         const { items } = get();
-        return items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+        return items.reduce((acc, item) => acc + parseFloat(item.price) * item.quantity, 0);
       },
     }),
     {

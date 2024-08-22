@@ -3,9 +3,21 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
+interface Product {
+  id: string;
+  name: string;
+  price: string;
+  // Add other relevant properties
+}
 
-// * products is an array of products, from the useProductStore 
-export default function ProductsList({ products }: any) {
+interface ProductsListProps {
+  products: Product[];
+  loading: boolean;
+  error: string | null;
+}
+export default function ProductsList({ products, loading, error }: ProductsListProps) {
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error}</div>;
   
   return (
     <div className=" text-black font-bold">
@@ -15,7 +27,7 @@ export default function ProductsList({ products }: any) {
           <p className="text-gray-500 text-sm">Showing {products.length} products</p>
         </div>
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
-          {products.map((product: any) => {
+          {products.map((product: Product) => {
             return <ProductCard key={product.id} id={product.id} product={product} />;
           })}
         </div>

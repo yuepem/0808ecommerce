@@ -7,7 +7,19 @@ import { ShoppingCart, Minus, Plus } from "lucide-react";
 //States
 import useCartStore from "@/stores/cartStore";
 
-export default function ProductCard(product: any) {
+interface Product {
+  id: string;
+  name: string;
+  price: string;
+  imageUrl: string;
+  // Add other relevant properties
+}
+
+interface ProductCardProps {
+  product: Product;
+}
+
+export default function ProductCard({product}: ProductCardProps) {
   const { items, addToCart, removeFromCart, updateQuantity } = useCartStore();
 
   const cartItem = items.find((item) => item.id === product.id);
@@ -33,12 +45,12 @@ export default function ProductCard(product: any) {
     <div className="flex flex-col gap-4  border-black rounded-lg">
       <Link href="/products/{product.id}">
         <div className="bg-stone-100 rounded-md">
-          <Image src="" alt="product" width={300} height={200} />
+          <Image src={product.imageUrl} alt="product" width={300} height={200} style={{ width: "auto", height: "auto" }} />
         </div>
         <div>
           <h3 className="mt-4 text-sm  text-gray-700">{product.name}</h3>
           <p className="mt-1 text-sm font-medium text-gray-900">
-            $ {product.price} kr
+            {product.price} kr
           </p>
         </div>
       </Link>
