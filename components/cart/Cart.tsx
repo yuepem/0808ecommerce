@@ -53,7 +53,7 @@ export default function Cart({
               <div className="flex flex-col gap-2 ">
                 {
                   items.map((item) => (
-                    <CartItemCard key={item.id} item={item} />
+                    <CartItemCard key={item.id} id={item.id} item={item} />
                   ))
                 }
               </div>

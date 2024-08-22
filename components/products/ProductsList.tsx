@@ -7,10 +7,12 @@ interface Product {
   id: string;
   name: string;
   price: string;
+  imageUrl: string;
   // Add other relevant properties
 }
 
 interface ProductsListProps {
+ 
   products: Product[];
   loading: boolean;
   error: string | null;

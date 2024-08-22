@@ -7,25 +7,23 @@ import AccordionComponent from "@/components/ui/AccordionComponent";
 import { Minus, Plus } from "lucide-react";
 import useCartStore from "@/stores/cartStore";
 
-//Mock data for Product Information
-const productInfo = [
-  {
-    question: "Is it accessible?",
-    answer: "Yes. It adheres to the WAI-ARIA design pattern.",
-  },
-  {
-    question: "Is it styled?",
-    answer:
-      "Yes. It comes with default styles that matches the other components' aesthetic.",
-  },
-  {
-    question: "Is it animated?",
-    answer:
-      "Yes. It's animated by default, but you can disable it if you prefer.",
-  },
-];
 
-export default function ProductDetails(product: any) {
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  imageUrl: string;
+  accordion: { question: string; answer: string }[];
+}
+
+interface ProductDetailsProps {
+  product: Product;
+}
+
+
+
+export default function ProductDetails({ product }: ProductDetailsProps) {
   const { items, addToCart, removeFromCart, updateQuantity } = useCartStore();
   const cartItem = items.find((item) => item.id === product.id);
   const quantity = cartItem ? cartItem.quantity : 0;
@@ -49,7 +47,7 @@ export default function ProductDetails(product: any) {
       <div className=" flex flex-col sm:flex-row gap-4">
         {/* component A */}
         <div className="bg-stone-100 rounded-2xl flex justify-center items-center sm:w-2/5 max-sm:p-4 ">
-          <ProductCarousel image={product.image} />
+          <ProductCarousel images={product.imageUrl} />
         </div>
         {/* component B */}
         <div className="bg-stone-100 flex flex-col justify-between gap-4 sm:w-3/5 p-4 rounded-2xl">
@@ -58,7 +56,7 @@ export default function ProductDetails(product: any) {
             <p className="text-sm text-stone-600">{product.description}</p>
           </div>
           <div className=" bg-stone-200 rounded-2xl flex flex-col items-center py-2 sm:flex-row sm:items-end justify-between sm:p-6">
-            <p className="p-2 sm:p-3">$ {product.price.toFixed(2)} kr</p>
+            <p className="p-2 sm:p-3">{product.price} kr</p>
             <div>
               {quantity === 0 ? (
                 <Button
@@ -88,7 +86,7 @@ export default function ProductDetails(product: any) {
           </div>
           <div className="font-normal text-sm">
             {/* <ProductInformation /> */}
-            <AccordionComponent data={productInfo} />
+            <AccordionComponent data={product.accordion} />
           </div>
         </div>
       </div>

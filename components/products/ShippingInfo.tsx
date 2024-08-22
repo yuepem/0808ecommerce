@@ -2,6 +2,7 @@
 import React from "react";
 import { Container, Plane, CreditCard, Undo2 } from "lucide-react";
 
+
 export default function ShippingInfo() {
   return (
     <div className=" max-w-7xl mx-auto my-6 sm:px-6 lg:px-8">

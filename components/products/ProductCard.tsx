@@ -16,6 +16,7 @@ interface Product {
 }
 
 interface ProductCardProps {
+  id: string;
   product: Product;
 }
 
@@ -43,7 +44,7 @@ export default function ProductCard({product}: ProductCardProps) {
 
   return (
     <div className="flex flex-col gap-4  border-black rounded-lg">
-      <Link href="/products/{product.id}">
+      <Link href={`/products/${product.id}`}>
         <div className="bg-stone-100 rounded-md">
           <Image src={product.imageUrl} alt="product" width={300} height={200} style={{ width: "auto", height: "auto" }} />
         </div>
