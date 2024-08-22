@@ -38,7 +38,7 @@ export default function ProductCard(product: any) {
         <div>
           <h3 className="mt-4 text-sm  text-gray-700">{product.name}</h3>
           <p className="mt-1 text-sm font-medium text-gray-900">
-            $ {product.price.toFixed(2)} kr
+            $ {product.price} kr
           </p>
         </div>
       </Link>
