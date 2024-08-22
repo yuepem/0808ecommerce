@@ -14,8 +14,8 @@ export default function AccordionComponent({ data }: { data: any }) {
       {Array.isArray(data) && data.length > 0 ? (
         data.map((item: any, index: any) => (
           <AccordionItem key={`item-${index}`} value={`item-${index + 1}`}>
-            <AccordionTrigger>{item.question}</AccordionTrigger>
-            <AccordionContent>{item.answer}</AccordionContent>
+            <AccordionTrigger className="text-slate-600 font-semibold">{item.question}</AccordionTrigger>
+            <AccordionContent >{item.answer}</AccordionContent>
           </AccordionItem>
         ))
       ) : (

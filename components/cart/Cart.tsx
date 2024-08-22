@@ -61,7 +61,7 @@ export default function Cart({
               <div className="flex flex-col gap-4">
                 <div className="flex justify-between items-center px-2">
                   <h3 className="text-sm font-medium">Subtotal</h3>
-                  <p className="text-sm font-medium">{getTotalPrice().toFixed(2)} kr</p>
+                  <p className="text-sm font-medium">{getTotalPrice()} kr</p>
                 </div>
                 <div className="flex justify-center">
                   <Link href="/checkout" className="w-full">
