@@ -1,44 +1,53 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect} from "react";
+import useCartStore from "@/stores/cartStore";
 
-// Mock data for cart items
-const cartItems = [
-  { id: 1, name: "Product 1", price: 10, quantity: 2 },
-  { id: 2, name: "Product 2", price: 15, quantity: 1 },
-];
-
-const subtotal = cartItems.reduce(
-  (acc, item) => acc + item.price * item.quantity,
-  0
-);
 const shipping = 5;
-const total = subtotal + shipping;
+
+interface OrderItem {
+  id: string;
+  name: string;
+  // imageUrl: string;
+  // cartId: string;
+  //   productId: string;
+  price: string;
+  quantity: number;
+}
 
 export default function CheckoutOrderSummary() {
+  const [OrderItems, setOrderItems] = useState<OrderItem[]>([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const { items, getTotalPrice } = useCartStore();
+
+  useEffect(() => {
+    setOrderItems(items);
+    setTotalPrice(getTotalPrice());
+  }, [items, getTotalPrice]);
+
   return (
     <div className="bg-white shadow-md rounded-lg p-6">
       <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
       <div className="space-y-4">
-        {cartItems.map((item) => (
+        {OrderItems.map((item: any) => (
           <div key={item.id} className="flex justify-between">
             <span>
               {item.name} x {item.quantity}
             </span>
-            <span>${item.price * item.quantity}</span>
+            <span>{(item.price * item.quantity).toFixed(2)} kr</span>
           </div>
         ))}
         <div className="border-t pt-4">
           <div className="flex justify-between">
             <span>Subtotal</span>
-            <span>${subtotal}</span>
+            <span>{totalPrice.toFixed(2)} kr</span>
           </div>
           <div className="flex justify-between">
             <span>Shipping</span>
-            <span>${shipping}</span>
+            <span>{shipping.toFixed(2)} kr</span>
           </div>
           <div className="flex justify-between font-semibold mt-2">
             <span>Total</span>
-            <span>${total}</span>
+            <span>{(totalPrice + shipping).toFixed(2)} kr</span>
           </div>
         </div>
       </div>

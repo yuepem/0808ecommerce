@@ -22,9 +22,9 @@ const SearchBar = ({ className = "" }: { className?: string }) => {
         onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
         onKeyUp={(e) => e.key === "Enter" && handleSearch()}
       />
-      <button onClick={handleSearch}>
+      <button onClick={handleSearch} >
         <SearchIcon
-          className="absolute right-3 hover:cursor-pointer"
+          className="absolute right-3 bottom-4 hover:cursor-pointer"
           size={20}
         />
       </button>

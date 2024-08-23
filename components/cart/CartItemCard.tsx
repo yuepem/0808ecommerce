@@ -30,7 +30,7 @@ export default function CartItemCard({ item }: any) {
       <div className="py-2">
         <Image
           className="rounded-md"
-          src={item.image}
+          src={item.imageUrl}
           alt="Product image"
           width={120}
           height={120}
@@ -44,7 +44,7 @@ export default function CartItemCard({ item }: any) {
           </div>
           <div>
             <span className="text-sm ">
-              {(item.price * item.quantity)} kr
+              {(item.price * item.quantity).toFixed(2)} kr
             </span>
           </div>
         </div>

@@ -7,6 +7,7 @@ import { persist, createJSONStorage } from "zustand/middleware";
 interface CartItem {
   id: string;
   name: string;
+  imageUrl: string;
   // cartId: string;
   //   productId: string;
   price: string;
@@ -18,7 +19,7 @@ interface CartStore {
   items: CartItem[];
 
   /* Actions */
-  addToCart: (item: { id: string; name: string; price: string }) => void;
+  addToCart: (item: { id: string; name: string; imageUrl: string; price: string }) => void;
   removeFromCart: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
@@ -48,6 +49,7 @@ const useCartStore = create<CartStore>()(
               {
                 id: item.id,
                 name: item.name,
+                imageUrl: item.imageUrl,
                 price: item.price,
                 quantity: 1,
               },
