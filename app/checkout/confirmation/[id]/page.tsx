@@ -9,11 +9,11 @@ interface ConfirmationPageProps {
 }
 
 export default function ConfirmationPage({ params }: ConfirmationPageProps) {
-  const { id } = params;
+  // const { id } = params;
 
   return (
     <div>
-      <Confirmation id={id} />
+      <Confirmation params={params} />
     </div>
   );
 }

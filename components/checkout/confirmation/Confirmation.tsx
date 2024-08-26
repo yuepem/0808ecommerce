@@ -1,15 +1,34 @@
 "use client";
-import React, { useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import OrderItemCard from "./OrderItemCard";
-import { CircleCheck } from 'lucide-react';
+import { CircleCheck } from "lucide-react";
 import useOrderStore from "@/stores/orderStore";
 
-export default function Confirmation(id: any) {
-  const { orderId } = id;
+interface ConfirmationProps {
+  params: {
+    id: string;
+  };
+}
 
-  const getOrder = useOrderStore((state) => state.getOrder);
-  const orderData = orderId ? getOrder(orderId as string) : null;
+export default function Confirmation({ params }: ConfirmationProps) {
+  const { id } = params;
+  const orderId = id;
+  const [orderData, setOrderData] = useState<ReturnType<
+    typeof getOrder
+  > | null>(null);
+  // const getOrder = useOrderStore((state) => state.getOrder);
+  const { getOrder } = useOrderStore();
+
+  useEffect(() => {
+    const fetchOrderData = async () => {
+      if (orderId) {
+        const data = await getOrder(orderId as string); // Ensure getOrder is async
+        setOrderData(data);
+      }
+    };
+    fetchOrderData();
+  }, [orderId, getOrder]);
 
   if (!orderData) {
     return <div>Loading...</div>;
@@ -27,24 +46,31 @@ export default function Confirmation(id: any) {
         </div>
         <hr />
         <div className="flex flex-col gap-2 px-4">
-          <h2 className="text-md font-semibold text-gray-500 pb-4">Shipping Address</h2>
-          <p>{orderData.order.customerInfo.firstName} {orderData.order.customerInfo.lastName}</p>
+          <h2 className="text-md font-semibold text-gray-500 pb-4">
+            Shipping Address
+          </h2>
+          <p>
+            {orderData.order.customerInfo.firstName}{" "}
+            {orderData.order.customerInfo.lastName}
+          </p>
           <p>{orderData.order.customerInfo.phoneNumber}</p>
-          <p>{orderData.order.customerInfo.address}</p>
+          <p>{orderData.order.customerInfo.address} - {orderData.order.customerInfo.province.toUpperCase()} {orderData.order.customerInfo.postalCode}</p>
         </div>
         <hr />
         <div className="flex flex-col gap-2 px-4">
-          <h2 className="text-md font-semibold text-gray-500 pb-4">Order Items</h2>
+          <h2 className="text-md font-semibold text-gray-500 pb-4">
+            Order Items
+          </h2>
           <div className="flex flex-col gap-2">
             {orderData.items.map((item) => (
-              <OrderItemCard key={item.id} item={item} />
+              <OrderItemCard  key={item.id} item={item} />
             ))}
           </div>
         </div>
         <hr />
         <div className="flex justify-between gap-2 px-4">
           <h3 className="text-md pb-4">Total</h3>
-          <p className="text-md pb-4">{orderData.order.totalPrice.toFixed(2)} kr</p>
+          <p className="text-md pb-4 font-semibold">{orderData.order.totalPrice.toFixed(2)} kr</p>
         </div>
       </div>
     </div>
