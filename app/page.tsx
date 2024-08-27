@@ -5,7 +5,7 @@ import Categories from "@/components/categories/Categories";
 import ProductsList from "@/components/products/ProductsList";
 import Banner2 from "@/components/promotion/Banner2";
 import useProductStore from "@/stores/productStore";
-// import CateBar from "@/components/categories/CateBar";
+
 
 
 
@@ -32,7 +32,6 @@ export default function Home() {
     <main>
       <Banner />
       <Categories  setCurrentView={setCurrentView} />
-      {/* <CateBar /> */}
       <ProductsList products={products} loading={loading} error={error}  />
       <Banner2 />
     </main>

@@ -3,14 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
+
 export default function Banner() {
     return (
       <div className="relative bg-slate-400 h-[300px] overflow-hidden">
         <Image
           src="/placeHolder.jpg"
           alt="Special offer background"
-          layout="fill"
-          objectFit="cover"
+          sizes="100vw"
+          fill
+          style={{
+            objectFit: "cover",
+          }} 
           className="absolute z-0"
         />
         <div className="relative z-10 max-w-7xl mx-auto h-full py-6 px-4 flex justify-start ">

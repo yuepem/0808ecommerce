@@ -6,6 +6,7 @@ import categoryDATA from "@/dataForTesting/categoryDATA";
 interface Category {
   id: number;
   name: string;
+  imageUrl: string;
   description: string;
 }
 

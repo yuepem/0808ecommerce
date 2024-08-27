@@ -36,7 +36,8 @@ export default function Categories( {setCurrentView}: any) {
                 >
                   <Image
                     className="rounded-md"
-                    src="/placeHolder.jpg"
+                    style={{ width: "auto", height: "auto" }} 
+                    src={category.imageUrl}
                     alt={category.name}
                     width={100}
                     height={100}

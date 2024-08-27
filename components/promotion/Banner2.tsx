@@ -19,7 +19,7 @@ export default function Banner() {
           </Link>
         </div>
         <div >
-          <Image src="/placeHolder.jpg" alt="Special offer" width={300} height={300} />
+          <Image src="/placeHolder.jpg" alt="Special offer" width={300} height={300} style={{ width: "auto", height: "auto" }} />
         </div>
       </div>
     </div>

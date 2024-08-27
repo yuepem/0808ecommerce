@@ -27,8 +27,8 @@ const NavBar = () => {
     <header>
       <nav className="max-w-7xl mx-auto flex justify-between items-center ">
         <Link href="/">
-          <div className="flex mx-4">
-            <Image src="/next.svg" alt="logo" width={100} height={100} />
+          <div className="flex mx-4" style={{width: '100px', height: '50px'}}>
+            <Image src="/next.svg" alt="logo" width={100} height={50} style={{objectFit: "contain"}}  />
           </div>
         </Link>
         <div className="hidden sm:flex mx-4 flex-grow justify-end">

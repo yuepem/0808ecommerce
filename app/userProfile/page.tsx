@@ -28,7 +28,7 @@ export default function UserProfile() {
       <div className="flex items-center mb-8">
         <Image
           src={avatar}
-          alt="Xiao Yue avatar"
+          alt="XiaoYue avatar"
           className="w-20 h-20 rounded-full mr-4"
         />
         <h1 className="text-2xl font-medium">Welcome, Xiao Yue</h1>
@@ -57,7 +57,7 @@ export default function UserProfile() {
             activeTab === "wishlist" ? "border-b-2 border-gray-800" : ""
           }`}
         >
-          Wishlist
+          Wishlist(pending)
         </button>
       </div>
 
