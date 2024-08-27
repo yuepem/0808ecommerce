@@ -1,52 +1,11 @@
+'use client';
+
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
 import useCartStore from "./cartStore";
+import {CustomerInfo, PaymentInfo, OrderItem, Order, OrderStore} from './types/orderTypes'
 import { v4 as uuidv4 } from "uuid";
 
-interface CustomerInfo {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phoneNumber: string;
-  address: string;
-  city: string;
-  province: string;
-  postalCode: string;
-}
-
-interface PaymentInfo {
-  cardNumber: string;
-  expirationDate: string;
-  cvv: string;
-}
-
-interface OrderItem {
-  id: string;
-  orderId: string;
-  productId: string;
-  imageUrl: string;
-  name: string;
-  price: number;
-  quantity: number;
-}
-
-interface Order {
-  id: string;
-  customerInfo: CustomerInfo;
-  paymentInfo: PaymentInfo;
-  totalPrice: number;
-  createdAt: string;
-}
-
-interface OrderStore {
-  orders: Order[];
-  orderItems: OrderItem[];
-  createOrder: (
-    customerInfo: CustomerInfo,
-    paymentInfo: PaymentInfo
-  ) => Promise<string>;
-  getOrder: (orderId: string) => { order: Order; items: OrderItem[] } | null;
-}
 
 const useOrderStore = create<OrderStore>()(
   persist(

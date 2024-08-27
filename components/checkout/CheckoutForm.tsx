@@ -137,8 +137,8 @@ export default function CheckoutForm() {
     try {
       const { cardNumber, expirationDate, cvv, ...customerInfo } = formData;
 
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
       const orderId = await createOrder(customerInfo, {
         cardNumber,
         expirationDate,
@@ -219,18 +219,20 @@ export default function CheckoutForm() {
             {inputFiled("cvv", "CVV")}
           </div>
         </div>
-        {error && <p className="text-red-500" role="alert">{error}</p>}
+        {error && (
+          <p className="text-red-500" role="alert">
+            {error}
+          </p>
+        )}
         <div className="w-full mb-6">
-          
-            <Button
-              type="submit"
-              className="w-full"
-              disabled={isSubmitting || !isFormValid}
-              onClick={!isFormValid ? handleInvalidSubmit : undefined}
-            >
-              {isSubmitting ? "Placing Order..." : "Place Order"}
-            </Button>
-          
+          <Button
+            type="submit"
+            className="w-full"
+            disabled={isSubmitting || !isFormValid}
+            onClick={!isFormValid ? handleInvalidSubmit : undefined}
+          >
+            {isSubmitting ? "Placing Order..." : "Place Order"}
+          </Button>
         </div>
       </form>
       {showConfirmation && orderId && (

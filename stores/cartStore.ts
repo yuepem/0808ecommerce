@@ -2,30 +2,7 @@
 
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-
-
-interface CartItem {
-  id: string;
-  name: string;
-  imageUrl: string;
-  // cartId: string;
-  //   productId: string;
-  price: string;
-  quantity: number;
-}
-
-interface CartStore {
-  // * state
-  items: CartItem[];
-
-  /* Actions */
-  addToCart: (item: { id: string; name: string; imageUrl: string; price: string }) => void;
-  removeFromCart: (id: string) => void;
-  updateQuantity: (id: string, quantity: number) => void;
-  clearCart: () => void;
-  getTotalItems: () => number;
-  getTotalPrice: () => number;
-}
+import { CartItem, CartStore } from "./types/cartTypes";
 
 const useCartStore = create<CartStore>()(
   persist(

@@ -33,7 +33,8 @@ export default function ProductCarousel({ images }: ProductCarouselProps) {
                     alt={`Product image ${index + 1}`} 
                     width={300} 
                     height={300} 
-                    objectFit="cover"
+                    
+                    style={{objectFit:"cover", width: "auto", height: "auto" }}
                   />
                 </CardContent>
               </Card>

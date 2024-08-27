@@ -1,22 +1,11 @@
+'use client';
+
 import { create } from 'zustand';
+import { CategoryStore } from './types/categoryType';
 
 // Import the mock data
 import categoryDATA from "@/dataForTesting/categoryDATA";
 
-interface Category {
-  id: number;
-  name: string;
-  imageUrl: string;
-  description: string;
-}
-
-interface CategoryStore {
-  categories: Category[];
-  loading: boolean;
-  error: string | null;
-  fetchCategories: () => void;
-  getCategoryById: (id: number) => Category | undefined;
-}
 
 const useCategoryStore = create<CategoryStore>()((set, get) => ({
   categories: [],

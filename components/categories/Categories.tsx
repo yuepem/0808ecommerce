@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 // import Link from "next/link";
 import Image from "next/image";
 import useProductStore from "@/stores/productStore";
-import useCategoryStore from "@/stores/categoryStor";
+import useCategoryStore from "@/stores/categoryStore";
 
 
 export default function Categories( {setCurrentView}: any) {

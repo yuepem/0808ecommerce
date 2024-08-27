@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import dynamic from "next/dynamic";
 import CheckoutForm from "@/components/checkout/CheckoutForm";
 import CheckoutOrderSummary from "@/components/checkout/CheckoutOrderSummary";
 
