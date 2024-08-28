@@ -3,42 +3,47 @@ import { create } from "zustand";
 import { ProductStore } from "./types/productType";
 
 /* * import mockData for testing */
-import productData from "@/dataForTesting/productData";
+import productData from "@/dataForTesting/productData"; // Ensure this matches the actual file name
 
 // * mockData
 const mockProducts = productData;
 
-
 const useProductStore = create<ProductStore>()((set, get) => ({
-  products:[],
+  products: [],
   relatedProducts: [],
   loading: true,
   error: null,
 
   // actions
   fetchHomeProducts: () => {
-    set({ 
-      products: mockProducts.slice(0, 15), 
-      loading: false, 
-      error: null 
+    set({
+      products: mockProducts.slice(0, 15),
+      loading: false,
+      error: null,
     });
   },
 
   fetchProductsByCategory: (categoryId: number) => {
-    const categoryProducts = mockProducts.filter(p => p.category_id === categoryId);
+    const categoryProducts = mockProducts.filter(
+      (p) => p.category_id === categoryId
+    );
     set({
       products: categoryProducts,
       loading: false,
-      error: null
+      error: null,
     });
   },
 
   fetchRelatedProducts: (productId: string) => {
     const product = get().getProductById(productId);
-    const products = mockProducts.filter(
+    const results = mockProducts.filter(
       (p) => p.category_id === product?.category_id
     );
-    set({ relatedProducts: products, loading: false, error: null });
+    if (!product) {
+      set({ relatedProducts: get().products, loading: false, error: null });
+    } else {
+      set({ relatedProducts: results, loading: false, error: null });
+    }
   },
 
   getProductById: (id: string) => {
@@ -47,7 +52,9 @@ const useProductStore = create<ProductStore>()((set, get) => ({
 
   searchProducts: (query: string) => {
     const results = mockProducts.filter(
-      (p) => p.name.toLowerCase().includes(query.toLowerCase()) || p.description.toLowerCase().includes(query.toLowerCase())
+      (p) =>
+        p.name.toLowerCase().includes(query.toLowerCase()) ||
+        p.description.toLowerCase().includes(query.toLowerCase())
     );
 
     set({ products: results, loading: false, error: null });
