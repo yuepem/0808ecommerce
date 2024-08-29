@@ -10,7 +10,7 @@ interface FormData {
   lastName: string;
   email: string;
   phoneNumber: string;
-  address: string;
+  streetAddress: string;
   city: string;
   province: string;
   postalCode: string;
@@ -24,7 +24,7 @@ interface FormErrors {
   lastName?: string;
   email?: string;
   phoneNumber?: string;
-  address?: string;
+  streetAddress?: string;
   city?: string;
   province?: string;
   postalCode?: string;
@@ -40,7 +40,7 @@ export default function CheckoutForm() {
     lastName: "",
     email: "",
     phoneNumber: "",
-    address: "",
+    streetAddress: "",
     city: "",
     province: "",
     postalCode: "",
@@ -73,7 +73,7 @@ export default function CheckoutForm() {
         return !phoneRegex.test(value)
           ? "Invalid phone number(10-11 digits)"
           : undefined;
-      case "address":
+      case "streetAddress":
       case "city":
         return value.length < 5
           ? "Address must be at least 5 characters long"
@@ -202,7 +202,7 @@ export default function CheckoutForm() {
             {inputFiled("lastName", "Last Name")}
             {inputFiled("email", "Email", "email")}
             {inputFiled("phoneNumber", "Phone Number")}
-            {inputFiled("address", "Address")}
+            {inputFiled("streetAddress", "Address")}
             {inputFiled("city", "City")}
             {inputFiled("province", "Province")}
             {inputFiled("postalCode", "Postal Code")}

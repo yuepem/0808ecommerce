@@ -6,7 +6,7 @@ import ProductCard from "./ProductCard";
 interface Product {
   id: string;
   name: string;
-  price: string;
+  price: number;
   imageUrl: string;
   // Add other relevant properties
 }

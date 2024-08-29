@@ -10,7 +10,7 @@ import useCartStore from "@/stores/cartStore";
 interface Product {
   id: string;
   name: string;
-  price: string;
+  price: number;
   imageUrl: string;
   // Add other relevant properties
 }
@@ -51,7 +51,7 @@ export default function ProductCard({product}: ProductCardProps) {
         <div>
           <h3 className="mt-4 text-sm  text-gray-700">{product.name}</h3>
           <p className="mt-1 text-sm font-medium text-gray-900">
-            {product.price} kr
+            {product.price.toFixed(2)} kr
           </p>
         </div>
       </Link>

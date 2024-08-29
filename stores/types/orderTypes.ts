@@ -4,7 +4,7 @@ export interface CustomerInfo {
   lastName: string;
   email: string;
   phoneNumber: string;
-  address: string;
+  streetAddress: string;
   city: string;
   province: string;
   postalCode: string;

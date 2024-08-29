@@ -5,7 +5,7 @@ export interface CartItem {
     imageUrl: string;
     // cartId: string;
     //   productId: string;
-    price: string;
+    price: number;
     quantity: number;
   }
   
@@ -14,7 +14,7 @@ export interface CartItem {
     items: CartItem[];
   
     /* Actions */
-    addToCart: (item: { id: string; name: string; imageUrl: string; price: string }) => void;
+    addToCart: (item: { id: string; name: string; imageUrl: string; price: number }) => void;
     removeFromCart: (id: string) => void;
     updateQuantity: (id: string, quantity: number) => void;
     clearCart: () => void;

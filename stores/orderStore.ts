@@ -35,7 +35,7 @@ const useOrderStore = create<OrderStore>()(
           productId: item.id,
           imageUrl: item.imageUrl,
           name: item.name,
-          price: parseFloat(item.price),
+          price: item.price,
           quantity: item.quantity,
         }));
     

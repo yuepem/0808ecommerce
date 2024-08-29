@@ -2,7 +2,7 @@
 
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { CartItem, CartStore } from "./types/cartTypes";
+import {  CartStore } from "./types/cartTypes";
 
 const useCartStore = create<CartStore>()(
   persist(
@@ -27,7 +27,7 @@ const useCartStore = create<CartStore>()(
                 id: item.id,
                 name: item.name,
                 imageUrl: item.imageUrl,
-                price: item.price,
+                price: typeof item.price === "string" ? parseFloat(item.price) : item.price,
                 quantity: 1,
               },
             ],
@@ -55,7 +55,7 @@ const useCartStore = create<CartStore>()(
 
       getTotalPrice: () => {
         const { items } = get();
-        return items.reduce((acc, item) => acc + parseFloat(item.price) * item.quantity, 0);
+        return items.reduce((acc, item) => acc + item.price * item.quantity, 0);
       },
     }),
     {

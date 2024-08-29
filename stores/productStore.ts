@@ -17,7 +17,7 @@ const useProductStore = create<ProductStore>()((set, get) => ({
   // actions
   fetchHomeProducts: () => {
     set({
-      products: mockProducts.slice(0, 15),
+      products: mockProducts.slice(0, 15).map(p => ({...p, price: parseFloat(p.price)})), 
       loading: false,
       error: null,
     });
@@ -28,7 +28,7 @@ const useProductStore = create<ProductStore>()((set, get) => ({
       (p) => p.category_id === categoryId
     );
     set({
-      products: categoryProducts,
+      products: categoryProducts.map(p => ({...p, price: parseFloat(p.price)})),
       loading: false,
       error: null,
     });
@@ -42,12 +42,14 @@ const useProductStore = create<ProductStore>()((set, get) => ({
     if (!product) {
       set({ relatedProducts: get().products, loading: false, error: null });
     } else {
-      set({ relatedProducts: results, loading: false, error: null });
+      set({ relatedProducts: results.map(p => ({...p, price: parseFloat(p.price)})), loading: false, error: null });
     }
   },
 
   getProductById: (id: string) => {
-    return mockProducts.find((product) => product.id === id);
+    const product = mockProducts.find((product) => product.id === id);
+    // Ensure price is a number
+    return product ? { ...product, price: parseFloat(product.price) } : undefined;
   },
 
   searchProducts: (query: string) => {
@@ -57,7 +59,7 @@ const useProductStore = create<ProductStore>()((set, get) => ({
         p.description.toLowerCase().includes(query.toLowerCase())
     );
 
-    set({ products: results, loading: false, error: null });
+    set({ products: results.map(p => ({...p, price: parseFloat(p.price)})), loading: false, error: null });
   },
 }));
 

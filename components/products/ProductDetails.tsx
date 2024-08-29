@@ -11,9 +11,13 @@ interface Product {
   id: string;
   name: string;
   description: string;
-  price: string;
+  price: number;
   imageUrl: string;
   accordion: { question: string; answer: string }[];
+}
+interface accordion {
+  question: string;
+  answer: string;
 }
 
 interface ProductDetailsProps {
@@ -24,6 +28,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
   const { items, addToCart, removeFromCart, updateQuantity } = useCartStore();
   const cartItem = items.find((item) => item.id === product.id);
   const quantity = cartItem ? cartItem.quantity : 0;
+  const accordion = product.accordion;
 
   const handleAddToCart = () => {
     addToCart(product);
@@ -53,7 +58,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
             <p className="text-sm text-stone-600">{product.description}</p>
           </div>
           <div className=" bg-stone-200 rounded-2xl flex flex-col items-center py-2 sm:flex-row sm:items-end justify-between sm:p-6">
-            <p className="p-2 sm:p-3 font-semibold">{product.price} kr</p>
+            <p className="p-2 sm:p-3 font-semibold">{product.price.toFixed(2)} kr</p>
             <div className=" max-sm:w-full flex justify-center p-2">
               {quantity === 0 ? (
                 <Button
@@ -85,7 +90,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
           </div>
           <div className="font-normal text-sm">
             {/* <ProductInformation /> */}
-            <AccordionComponent data={product.accordion} />
+            <AccordionComponent data={accordion} />
           </div>
         </div>
       </div>

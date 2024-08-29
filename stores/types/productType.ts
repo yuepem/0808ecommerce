@@ -3,11 +3,11 @@ export interface Product {
   id: string;
   name: string;
   description: string;
-  price: string;
+  // change price type from string to number
+  price: number;
   stock: number;
   category_id: number;
   imageUrl: string;
-  featuredType: string;
   accordion: { question: string; answer: string }[];
   created_at: string;
   updated_at: string;
