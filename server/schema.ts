@@ -1,13 +1,27 @@
-import { pgTable, uuid, text, timestamp, integer, pgEnum } from 'drizzle-orm/pg-core';
-import { relations } from 'drizzle-orm';
+import { pgTable, serial, uuid, text, timestamp, integer, pgEnum } from 'drizzle-orm/pg-core';
+import { not, relations } from 'drizzle-orm';
+
 
 //  Define ENUMs
-const orderStatusEnum = pgEnum('order_status', ['Pending', 'Paid', 'Done', 'Cancelled']);
-const accountTypeEnum = pgEnum('account_type', ['Admin', 'User']);
+export const orderStatusEnum = pgEnum('order_status', ['Pending', 'Paid', 'Done', 'Cancelled']);
+export const accountTypeEnum = pgEnum('account_type', ['Admin', 'User']);
+
+/* 
+  * users id: uuid
+  * addresses id: uuid
+  * accounts id: uuid
+  ! categories id: serial
+  * products id: uuid
+  * accordion_items id: uuid
+  ! orders id: text  -->  id = Date.now().toString();
+  * order_items id: uuid
+  * carts id: uuid
+  ! cart_items id: text -->  id = Date.now().toString(); user id last 4 digits + id 
+*/
 
 //  Users table
 export const users = pgTable('users', {
-  id: uuid('id').primaryKey().defaultRandom(),
+  id: uuid('id').primaryKey().defaultRandom(), 
   firstName: text('first_name').notNull(),
   lastName: text('last_name'),
   phoneNumber: text('phone_number').notNull().unique(),
@@ -47,7 +61,7 @@ export const accounts = pgTable('accounts', {
 
 // Categories table
 export const categories = pgTable('categories', {
-  id: integer('id').primaryKey(),
+  id: serial('id').primaryKey(),
   name: text('name').notNull().unique(),
   description: text('description'),
 });
@@ -92,7 +106,6 @@ export const cartItems = pgTable('cartItems', {
   quantity: integer('quantity').notNull(),
 });
 
-// Orders table
 export const orders = pgTable('orders', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
@@ -103,9 +116,8 @@ export const orders = pgTable('orders', {
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
 
-// Order items table
 export const orderItems = pgTable('orderItems', {
-  id: text('id').primaryKey(),
+  id: uuid('id').primaryKey().defaultRandom(),
   orderId: uuid('order_id').references(() => orders.id, { onDelete: 'cascade' }).notNull(),
   productId: uuid('product_id').references(() => products.id).notNull(),
   name: text('name').notNull(),
