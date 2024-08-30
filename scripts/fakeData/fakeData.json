@@ -1,0 +1,1340 @@
+{
+  "users": [
+    {
+      "id": "329cb615-88e8-40de-a9d0-a161295c685b",
+      "first_name": "Adrianna",
+      "last_name": "Heathcote",
+      "phone_number": "(838) 528-7876",
+      "email": "Lourdes94@hotmail.com",
+      "password_hash": "kvdnx7qAsaFZrgi",
+      "created_at": "2023-11-22T03:57:02.003Z",
+      "updated_at": "2024-08-30T02:36:24.665Z"
+    },
+    {
+      "id": "33279dad-c043-4e68-9147-bfdec7f01ec4",
+      "first_name": "Cecelia",
+      "last_name": "Kuhn",
+      "phone_number": "865-571-5156 x6842",
+      "email": "Pablo.Kessler@yahoo.com",
+      "password_hash": "qhhnXuQFAYFPo2D",
+      "created_at": "2023-09-03T12:19:34.641Z",
+      "updated_at": "2024-08-29T19:46:21.511Z"
+    },
+    {
+      "id": "58ef6f9d-7262-4a0b-a393-d34ccc5586e5",
+      "first_name": "Jarrell",
+      "last_name": "Stehr",
+      "phone_number": "633-912-1895",
+      "email": "Aisha.Runolfsdottir@gmail.com",
+      "password_hash": "ajE7uJBRIjonGDH",
+      "created_at": "2024-07-21T12:10:28.044Z",
+      "updated_at": "2024-08-30T00:41:48.416Z"
+    },
+    {
+      "id": "1cb4f3e1-1d7d-4728-9256-b4e5abbc6547",
+      "first_name": "Blair",
+      "last_name": "Harber",
+      "phone_number": "562-988-4036 x00067",
+      "email": "Megane_Buckridge@gmail.com",
+      "password_hash": "ELolywzj0ShJdmn",
+      "created_at": "2023-12-15T16:18:25.868Z",
+      "updated_at": "2024-08-29T21:17:15.575Z"
+    },
+    {
+      "id": "1869d865-7cb8-4b73-9455-97fe0413c3d5",
+      "first_name": "Odessa",
+      "last_name": "Upton",
+      "phone_number": "978.259.3212 x3372",
+      "email": "Maude69@hotmail.com",
+      "password_hash": "Gs_rrZtwnOpuHN0",
+      "created_at": "2024-03-17T09:57:59.853Z",
+      "updated_at": "2024-08-30T09:49:17.600Z"
+    },
+    {
+      "id": "574ed7e7-6087-48be-a158-7a41233ba50a",
+      "first_name": "Blaise",
+      "last_name": "Ruecker",
+      "phone_number": "1-837-744-5646 x8815",
+      "email": "Vernice92@gmail.com",
+      "password_hash": "2DdRm8o6vbfQ7h3",
+      "created_at": "2023-09-09T11:12:44.435Z",
+      "updated_at": "2024-08-29T20:25:53.283Z"
+    },
+    {
+      "id": "7c44e943-7e59-407b-a4ce-deb58cee4af3",
+      "first_name": "Alejandra",
+      "last_name": "Lemke",
+      "phone_number": "521-999-3825 x131",
+      "email": "Sierra.Brown85@hotmail.com",
+      "password_hash": "ipMbeqUWA7Xbppf",
+      "created_at": "2024-08-06T00:34:33.706Z",
+      "updated_at": "2024-08-30T02:03:16.533Z"
+    },
+    {
+      "id": "7a97276e-0362-4b96-9c14-84eab9655a6e",
+      "first_name": "Emelie",
+      "last_name": "Breitenberg",
+      "phone_number": "(266) 217-9204 x36845",
+      "email": "Heidi.Dach60@gmail.com",
+      "password_hash": "p_I1ghT6qLSMSYg",
+      "created_at": "2024-06-12T15:09:07.830Z",
+      "updated_at": "2024-08-30T03:17:25.669Z"
+    },
+    {
+      "id": "7013fbcc-0f93-4573-981b-ef925ec9e1a5",
+      "first_name": "Rosario",
+      "last_name": "Durgan",
+      "phone_number": "378.652.9732",
+      "email": "Emile_Okuneva@gmail.com",
+      "password_hash": "aAnCmb322qVT3wH",
+      "created_at": "2024-07-21T15:01:34.630Z",
+      "updated_at": "2024-08-29T17:50:32.039Z"
+    },
+    {
+      "id": "7ba8b037-316e-4014-ad46-2608c447ac32",
+      "first_name": "Dante",
+      "last_name": "Thiel",
+      "phone_number": "(769) 403-7422 x83980",
+      "email": "Erin85@gmail.com",
+      "password_hash": "Cr6wL8qwYubTfLV",
+      "created_at": "2024-06-05T09:47:12.448Z",
+      "updated_at": "2024-08-29T18:34:42.609Z"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "ee7687cb-96ce-44c3-a63f-1883a7ee527e",
+      "user_id": "329cb615-88e8-40de-a9d0-a161295c685b",
+      "street_address": "3633 Blind Lane",
+      "city": "Schadenville",
+      "province": "Ohio",
+      "postal_code": "42286"
+    },
+    {
+      "id": "5cb69efc-1041-4c67-9c44-5675b2adbf8e",
+      "user_id": "33279dad-c043-4e68-9147-bfdec7f01ec4",
+      "street_address": "85657 Harber Grove",
+      "city": "Johnson City",
+      "province": "Rhode Island",
+      "postal_code": "78375"
+    },
+    {
+      "id": "ab4ac9d0-6bf6-46f5-b3f1-872ea643005c",
+      "user_id": "58ef6f9d-7262-4a0b-a393-d34ccc5586e5",
+      "street_address": "9247 W Monroe Street",
+      "city": "Beckerville",
+      "province": "Alabama",
+      "postal_code": "52984"
+    },
+    {
+      "id": "37acfc22-540b-4609-b7b7-f55df5c3bbfb",
+      "user_id": "1cb4f3e1-1d7d-4728-9256-b4e5abbc6547",
+      "street_address": "101 Robbie Walk",
+      "city": "South Gus",
+      "province": "Pennsylvania",
+      "postal_code": "82227-7663"
+    },
+    {
+      "id": "895894f0-e573-494f-9e3f-65e27377bc37",
+      "user_id": "1869d865-7cb8-4b73-9455-97fe0413c3d5",
+      "street_address": "203 Jamison Forks",
+      "city": "Lefflershire",
+      "province": "Alaska",
+      "postal_code": "76897"
+    },
+    {
+      "id": "e8b01a3b-41af-42cf-b265-d2b8def479da",
+      "user_id": "574ed7e7-6087-48be-a158-7a41233ba50a",
+      "street_address": "197 Esteban Ramp",
+      "city": "Lake Anibal",
+      "province": "North Carolina",
+      "postal_code": "82621-4967"
+    },
+    {
+      "id": "b0ff1b2d-c63e-4151-9a1b-306c77917e96",
+      "user_id": "7c44e943-7e59-407b-a4ce-deb58cee4af3",
+      "street_address": "531 Lambert Wall",
+      "city": "Pleasanton",
+      "province": "Illinois",
+      "postal_code": "70639-8122"
+    },
+    {
+      "id": "d590675b-ee04-4fae-aec9-c1a625d0ff41",
+      "user_id": "7a97276e-0362-4b96-9c14-84eab9655a6e",
+      "street_address": "615 Madeline Points",
+      "city": "Hettingerburgh",
+      "province": "Virginia",
+      "postal_code": "70606-9077"
+    },
+    {
+      "id": "45844a53-2ba7-4196-ad62-774448f6e4e4",
+      "user_id": "7013fbcc-0f93-4573-981b-ef925ec9e1a5",
+      "street_address": "494 Leffler Freeway",
+      "city": "Aftonville",
+      "province": "Nebraska",
+      "postal_code": "01030-0835"
+    },
+    {
+      "id": "0970d8ab-8d6a-4650-99e9-16468b788e6f",
+      "user_id": "7ba8b037-316e-4014-ad46-2608c447ac32",
+      "street_address": "171 Beverly Corners",
+      "city": "Maryhaven",
+      "province": "Delaware",
+      "postal_code": "48286"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "baf1a30c-9030-4514-94b3-1e5a60a2b255",
+      "user_id": "7a97276e-0362-4b96-9c14-84eab9655a6e",
+      "account_type": "Admin",
+      "auth_provider": "O'Reilly, Rodriguez and Crona",
+      "provider_accountId": "ad8b1deb-b4c2-471d-8b7e-5bf9bbddf3cb",
+      "access_token": "gtriZO70mLv04UK",
+      "refresh_token": "Lsax5y9PHAOSACp",
+      "token_type": "BiDMr8MLA2-0-oq63SJX6",
+      "scope": "UXBueOvTEz",
+      "id_token": "xpWvnkvhPbPAWlB",
+      "session_state": "fEGnwbRmzn",
+      "created_at": "2024-07-24T11:16:33.001Z",
+      "expires_at": "2024-12-14T08:55:36.030Z",
+      "updated_at": "2024-08-30T04:02:33.537Z"
+    },
+    {
+      "id": "09bf0b51-06ab-41ab-911b-6fede3149045",
+      "user_id": "574ed7e7-6087-48be-a158-7a41233ba50a",
+      "account_type": "Admin",
+      "auth_provider": "Schowalter - Homenick",
+      "provider_accountId": "399996f0-efd6-4605-b5e7-6db8592e2d60",
+      "access_token": "B7WZLmcagBJ5HMK",
+      "refresh_token": "U4W3KwJm608plYJ",
+      "token_type": "NTVJBR1YfAQMpWLm0Myms",
+      "scope": "TwwzrGZaRk",
+      "id_token": "cgEzfPkmF6wR4Q_",
+      "session_state": "liycPNFSAp",
+      "created_at": "2023-12-03T09:26:48.508Z",
+      "expires_at": "2024-11-07T12:23:49.992Z",
+      "updated_at": "2024-08-29T20:32:45.020Z"
+    },
+    {
+      "id": "4d091a0f-b8e5-4733-acc1-9ba7ea0bc18b",
+      "user_id": "574ed7e7-6087-48be-a158-7a41233ba50a",
+      "account_type": "Admin",
+      "auth_provider": "Leuschke - Cruickshank",
+      "provider_accountId": "ab71ac1d-24cc-4736-ad54-435c4ede65fa",
+      "access_token": "IUhBsQYEdx05LQZ",
+      "refresh_token": "tU7PZnG_WE7rYqz",
+      "token_type": "ovLMycgan4c8AFNIGLr71",
+      "scope": "KhCynflQVJ",
+      "id_token": "dJ25Xd_Xpn3ZeXk",
+      "session_state": "tiPUeRdpvZ",
+      "created_at": "2023-09-18T03:41:16.295Z",
+      "expires_at": "2025-03-13T15:06:17.835Z",
+      "updated_at": "2024-08-30T13:13:35.852Z"
+    },
+    {
+      "id": "810efcdf-786a-4da5-97fd-5e74a3d464ed",
+      "user_id": "7013fbcc-0f93-4573-981b-ef925ec9e1a5",
+      "account_type": "Admin",
+      "auth_provider": "Kub Group",
+      "provider_accountId": "2dc5c4b9-f0d5-4f83-83fd-e2ba18270c8c",
+      "access_token": "KT4TVxlcYebTTQk",
+      "refresh_token": "V07xm4A0F7MHSwC",
+      "token_type": "o_8q-u5Xh-x3Jqys6yTW8",
+      "scope": "iaqqolZJuF",
+      "id_token": "lxL8t9PP6dAJifs",
+      "session_state": "WmqPKCrtYp",
+      "created_at": "2024-06-08T15:18:57.544Z",
+      "expires_at": "2025-01-27T20:13:04.762Z",
+      "updated_at": "2024-08-30T02:58:23.759Z"
+    },
+    {
+      "id": "8f427d19-4d93-4e39-b4ea-cc2480857c70",
+      "user_id": "33279dad-c043-4e68-9147-bfdec7f01ec4",
+      "account_type": "User",
+      "auth_provider": "Schneider Group",
+      "provider_accountId": "152e1e99-ba4d-4792-8716-c4d5cc2a7386",
+      "access_token": "aunLwxsN4ZMMpRn",
+      "refresh_token": "uYvu8v4qCE0hkbS",
+      "token_type": "8cQQGsIeG1sRkZqNLY4vR",
+      "scope": "BHTYbAIBtQ",
+      "id_token": "zJYJNzHARp302S6",
+      "session_state": "xLpuXXcGLX",
+      "created_at": "2024-06-07T03:32:25.379Z",
+      "expires_at": "2025-08-17T09:28:47.624Z",
+      "updated_at": "2024-08-29T23:23:59.072Z"
+    },
+    {
+      "id": "9f95083c-0a95-4dc2-b35e-d59ab85dca13",
+      "user_id": "7ba8b037-316e-4014-ad46-2608c447ac32",
+      "account_type": "User",
+      "auth_provider": "Funk - Gislason",
+      "provider_accountId": "63d06f78-c124-4df1-8ca3-7c33b209e425",
+      "access_token": "J1dhu825jl7r2iR",
+      "refresh_token": "_txMZdwIOqeDyzo",
+      "token_type": "XNxmvH3DaN4AjCFiO43S5",
+      "scope": "QQCdQgDaTD",
+      "id_token": "bUAqLSKZHH4QWuM",
+      "session_state": "xYWuIxuWZw",
+      "created_at": "2024-01-08T05:26:37.019Z",
+      "expires_at": "2024-12-01T05:48:20.339Z",
+      "updated_at": "2024-08-29T19:22:02.116Z"
+    },
+    {
+      "id": "b0bdfb2d-9772-419e-8556-4790b2111e48",
+      "user_id": "1869d865-7cb8-4b73-9455-97fe0413c3d5",
+      "account_type": "Admin",
+      "auth_provider": "Terry - Sipes",
+      "provider_accountId": "babfc86f-3d47-4ff2-8cf8-4849d3696746",
+      "access_token": "frptC8yc3fry6xE",
+      "refresh_token": "3_0A6N2UeJNdcyQ",
+      "token_type": "9MwS8f_BN4AeXcpvSDwwe",
+      "scope": "NGOXtALDBi",
+      "id_token": "TGsUbzO5vru1QHe",
+      "session_state": "qifmLiNIjd",
+      "created_at": "2024-05-13T16:59:19.208Z",
+      "expires_at": "2025-03-22T02:35:32.372Z",
+      "updated_at": "2024-08-30T05:59:54.830Z"
+    },
+    {
+      "id": "f03acb54-a1a1-423c-8b06-09d0e1c31ced",
+      "user_id": "7ba8b037-316e-4014-ad46-2608c447ac32",
+      "account_type": "User",
+      "auth_provider": "Wilderman LLC",
+      "provider_accountId": "849388b4-dc7e-4180-979b-2053899bb92e",
+      "access_token": "Um3aPBJwkZMaWwT",
+      "refresh_token": "Ff6bgoJnRi0tizl",
+      "token_type": "FbkKYiTXM0VMj9ejklNNZ",
+      "scope": "BBcQbzzLxT",
+      "id_token": "ynHWR_4RepMWiEo",
+      "session_state": "TelQahgGkE",
+      "created_at": "2024-07-15T20:30:15.147Z",
+      "expires_at": "2025-08-07T08:02:17.506Z",
+      "updated_at": "2024-08-30T01:36:03.239Z"
+    },
+    {
+      "id": "7b3e9fa3-aec1-4e12-924a-e92e30c58320",
+      "user_id": "1869d865-7cb8-4b73-9455-97fe0413c3d5",
+      "account_type": "User",
+      "auth_provider": "Franey and Sons",
+      "provider_accountId": "c4ca821f-7152-4095-989f-ab4ea9d63cde",
+      "access_token": "xK00mExktjH2omw",
+      "refresh_token": "mYpQSUezjFbfRCT",
+      "token_type": "PhKB2bMvcJ0kcs9AEm_-N",
+      "scope": "MpKcGKlVsF",
+      "id_token": "jycMCWXFJtt8SDR",
+      "session_state": "zGSdcsaAKY",
+      "created_at": "2024-02-24T22:44:46.476Z",
+      "expires_at": "2025-05-15T10:27:20.782Z",
+      "updated_at": "2024-08-30T06:26:18.204Z"
+    },
+    {
+      "id": "00bd4441-5347-4a45-be0c-ee91717b427e",
+      "user_id": "1869d865-7cb8-4b73-9455-97fe0413c3d5",
+      "account_type": "User",
+      "auth_provider": "Crooks, Bartell and Roob",
+      "provider_accountId": "e67b2a70-55ce-490e-bc64-079e669fa196",
+      "access_token": "cHmbI6igH8DWeUF",
+      "refresh_token": "R85dDYSnJqmR67G",
+      "token_type": "_kzkuL6DL_jFxV8SXffkB",
+      "scope": "BymwnUKSKF",
+      "id_token": "o6yTinVvFO2c0lC",
+      "session_state": "JbTTyGxNyH",
+      "created_at": "2023-09-07T07:24:15.546Z",
+      "expires_at": "2025-05-03T17:44:51.876Z",
+      "updated_at": "2024-08-29T19:57:39.171Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Grocery",
+      "image_url": "https://picsum.photos/seed/za0j6uzI/640/480",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles"
+    },
+    {
+      "id": 2,
+      "name": "Jewelery",
+      "image_url": "https://picsum.photos/seed/1nWlJYB93/640/480",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients"
+    },
+    {
+      "id": 3,
+      "name": "Automotive",
+      "image_url": "https://picsum.photos/seed/KmIq8SYEj5/640/480",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality"
+    },
+    {
+      "id": 4,
+      "name": "Movies",
+      "image_url": "https://picsum.photos/seed/jtrvPV7h/640/480",
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals"
+    },
+    {
+      "id": 5,
+      "name": "Music",
+      "image_url": "https://picsum.photos/seed/LmjKHpMwM5/640/480",
+      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive"
+    }
+  ],
+  "products": [
+    {
+      "id": "2ef25243-5081-411f-9e55-828219a6f97d",
+      "name": "Refined Soft Bacon",
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "price": "195",
+      "stock": 83,
+      "category_id": 1,
+      "image_url": "https://picsum.photos/seed/JE0bK5Jsjg/640/480",
+      "created_at": "2023-10-26T19:34:39.740Z",
+      "updated_at": "2024-08-29T15:16:36.131Z"
+    },
+    {
+      "id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "name": "Luxurious Bronze Computer",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "195",
+      "stock": 62,
+      "category_id": 1,
+      "image_url": "https://picsum.photos/seed/ir2q2RAWC/640/480",
+      "created_at": "2024-03-08T17:44:38.166Z",
+      "updated_at": "2024-08-30T04:36:11.438Z"
+    },
+    {
+      "id": "de54bf43-af4f-4c0d-ba05-c8552a745ccb",
+      "name": "Refined Frozen Sausages",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "price": "574",
+      "stock": 55,
+      "category_id": 1,
+      "image_url": "https://picsum.photos/seed/lLE2uNr1/640/480",
+      "created_at": "2024-04-13T06:54:12.667Z",
+      "updated_at": "2024-08-30T05:22:43.377Z"
+    },
+    {
+      "id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "name": "Incredible Bronze Table",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "price": "186",
+      "stock": 43,
+      "category_id": 2,
+      "image_url": "https://picsum.photos/seed/NIfOEl5xn/640/480",
+      "created_at": "2024-08-18T09:17:05.416Z",
+      "updated_at": "2024-08-29T15:11:33.050Z"
+    },
+    {
+      "id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "name": "Refined Plastic Hat",
+      "description": "The Football Is Good For Training And Recreational Purposes",
+      "price": "102",
+      "stock": 12,
+      "category_id": 2,
+      "image_url": "https://picsum.photos/seed/JZDzR/640/480",
+      "created_at": "2024-06-04T09:30:01.051Z",
+      "updated_at": "2024-08-30T11:23:21.723Z"
+    },
+    {
+      "id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "name": "Electronic Frozen Chicken",
+      "description": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
+      "price": "98",
+      "stock": 62,
+      "category_id": 2,
+      "image_url": "https://picsum.photos/seed/8WcnBCgtbz/640/480",
+      "created_at": "2024-06-29T00:03:17.257Z",
+      "updated_at": "2024-08-30T00:51:45.495Z"
+    },
+    {
+      "id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "name": "Small Bronze Chair",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "508",
+      "stock": 99,
+      "category_id": 3,
+      "image_url": "https://picsum.photos/seed/325LRbrlj/640/480",
+      "created_at": "2023-09-01T02:04:41.117Z",
+      "updated_at": "2024-08-30T07:02:24.164Z"
+    },
+    {
+      "id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "name": "Elegant Bronze Bike",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "price": "74",
+      "stock": 17,
+      "category_id": 3,
+      "image_url": "https://picsum.photos/seed/GrR6zUn22P/640/480",
+      "created_at": "2024-06-18T06:22:37.616Z",
+      "updated_at": "2024-08-30T07:38:23.497Z"
+    },
+    {
+      "id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "name": "Fantastic Concrete Pizza",
+      "description": "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
+      "price": "82",
+      "stock": 88,
+      "category_id": 3,
+      "image_url": "https://picsum.photos/seed/rW1nRu3pWf/640/480",
+      "created_at": "2023-12-02T10:16:43.094Z",
+      "updated_at": "2024-08-30T09:52:15.010Z"
+    },
+    {
+      "id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "name": "Bespoke Wooden Hat",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "price": "222",
+      "stock": 12,
+      "category_id": 4,
+      "image_url": "https://picsum.photos/seed/JZ1f17qgkC/640/480",
+      "created_at": "2023-09-12T04:33:09.818Z",
+      "updated_at": "2024-08-29T18:47:44.364Z"
+    },
+    {
+      "id": "6c209d84-c56d-49b8-ade4-c253b45eefbd",
+      "name": "Tasty Soft Tuna",
+      "description": "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
+      "price": "445",
+      "stock": 73,
+      "category_id": 4,
+      "image_url": "https://picsum.photos/seed/hKx0H7vwC/640/480",
+      "created_at": "2024-06-13T05:20:06.708Z",
+      "updated_at": "2024-08-30T10:16:06.622Z"
+    },
+    {
+      "id": "2808458c-0f20-45b2-a0d0-17c5e6a8d18a",
+      "name": "Fantastic Granite Ball",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "232",
+      "stock": 79,
+      "category_id": 4,
+      "image_url": "https://picsum.photos/seed/i2p6NDfI/640/480",
+      "created_at": "2023-09-24T12:55:13.031Z",
+      "updated_at": "2024-08-30T04:55:06.584Z"
+    },
+    {
+      "id": "becda93e-cece-4210-af8c-65844a3e71bc",
+      "name": "Modern Frozen Chicken",
+      "description": "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
+      "price": "231",
+      "stock": 36,
+      "category_id": 5,
+      "image_url": "https://picsum.photos/seed/x3j4LWfL/640/480",
+      "created_at": "2024-02-27T12:19:39.071Z",
+      "updated_at": "2024-08-29T16:22:03.978Z"
+    },
+    {
+      "id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "name": "Modern Frozen Table",
+      "description": "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
+      "price": "562",
+      "stock": 52,
+      "category_id": 5,
+      "image_url": "https://picsum.photos/seed/obW0r/640/480",
+      "created_at": "2024-03-06T23:10:34.060Z",
+      "updated_at": "2024-08-29T19:34:46.631Z"
+    },
+    {
+      "id": "2776e8f4-001b-4da2-b5af-d587d19d990b",
+      "name": "Electronic Plastic Table",
+      "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
+      "price": "98",
+      "stock": 55,
+      "category_id": 5,
+      "image_url": "https://picsum.photos/seed/51s5qDnR1/640/480",
+      "created_at": "2024-05-18T16:59:15.374Z",
+      "updated_at": "2024-08-29T19:35:14.006Z"
+    }
+  ],
+  "accordionItems": [
+    {
+      "id": "5783734b-e7ac-4506-8af3-4e25f8818614",
+      "product_id": "2ef25243-5081-411f-9e55-828219a6f97d",
+      "title": "Information",
+      "content": "Sint creber considero speculum cognatus. Tenuis doloribus apud vallum. Vulgus talio vinco non."
+    },
+    {
+      "id": "096755b9-4570-4659-b659-637c69b07dec",
+      "product_id": "2ef25243-5081-411f-9e55-828219a6f97d",
+      "title": "Modern",
+      "content": "Soleo voco autus aestus bibo trepide corpus creo tametsi sumo. Casus ascisco pecus utrimque utpote talio spoliatio taedium vulpes. Umquam correptius officiis arceo stabilis caecus ad facere."
+    },
+    {
+      "id": "f8300647-c12b-4507-a58c-14cf2fcb8983",
+      "product_id": "2ef25243-5081-411f-9e55-828219a6f97d",
+      "title": "Small",
+      "content": "Adamo depulso patria asper aperio adulatio basium voluptas. Demonstro deleniti tenetur patrocinor voluptates. Blanditiis modi alii delego cultellus nihil volup cursim distinctio."
+    },
+    {
+      "id": "09d6a06d-bc31-4840-bc0c-96089563d3a4",
+      "product_id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "title": "Information",
+      "content": "Sui ascisco canonicus capio. Clibanus tripudio speciosus. Crinis decens dignissimos."
+    },
+    {
+      "id": "cc2e4d45-7394-4328-8829-5beb5e8ff978",
+      "product_id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "title": "Ergonomic",
+      "content": "Adstringo laudantium versus velum tener alo subnecto theologus cunabula vitae. Eos canto subvenio depraedor thema careo confido cibus texo. Universe placeat veritatis capillus depereo tonsor sodalitas perferendis vinco recusandae."
+    },
+    {
+      "id": "3b5dd26a-b32d-463f-acee-87c304cf2d9d",
+      "product_id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "title": "Sleek",
+      "content": "Templum conatus voro defleo. Adsum adduco carmen textilis surgo accusator neque. Terga apparatus amet velociter cerno trado vinculum."
+    },
+    {
+      "id": "b7377017-e5a3-4b29-bc60-0418961d2079",
+      "product_id": "de54bf43-af4f-4c0d-ba05-c8552a745ccb",
+      "title": "Information",
+      "content": "Adsidue tenax possimus autus ventito. Fuga basium suscipio temptatio quibusdam explicabo vomer combibo. Ulterius vallum aestas arcesso credo."
+    },
+    {
+      "id": "51e3b311-dedd-421c-a39d-93bd117dcabc",
+      "product_id": "de54bf43-af4f-4c0d-ba05-c8552a745ccb",
+      "title": "Sleek",
+      "content": "Aperte suppellex ambitus vigor. Statim creta autem crapula basium spiritus vergo fuga. Labore quas officiis."
+    },
+    {
+      "id": "fde8375e-a577-4758-b063-73c2d61faf51",
+      "product_id": "de54bf43-af4f-4c0d-ba05-c8552a745ccb",
+      "title": "Handmade",
+      "content": "Combibo accendo autem trepide amplus. Virgo constans vaco video demulceo vesper barba. Depromo totus valens patria."
+    },
+    {
+      "id": "48190b6d-b3cb-4dbd-856e-4464d7d3cf76",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "title": "Information",
+      "content": "Tibi ulterius voluntarius tripudio. Crudelis architecto defero tantum tamisium conturbo sub tunc usus adhaero. Veritatis dens deprecator optio sumo pauper adipisci dolore amissio cupiditas."
+    },
+    {
+      "id": "a6ae74dd-715e-4ca0-b637-0a80dd48962e",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "title": "Rustic",
+      "content": "Desidero attollo expedita valeo. Umbra tempus repudiandae speciosus. Quidem tredecim considero vos abduco."
+    },
+    {
+      "id": "237cb0ef-fac3-4c5d-8ac0-30dcd3db77c0",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "title": "Elegant",
+      "content": "Desino tepesco ademptio arca blanditiis decor. Ambitus magnam arca conculco contego accusator consectetur patrocinor. Neque ultio venia avaritia cunabula cariosus."
+    },
+    {
+      "id": "aa18ecf4-226f-43bf-ac84-6fcf13d8ce28",
+      "product_id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "title": "Information",
+      "content": "Cernuus doloribus depopulo carcer decretum tempora auditor perferendis uterque curatio. Clamo summisse advenio calculus decens dolores aequus. Amaritudo suadeo ventus sumo adhuc."
+    },
+    {
+      "id": "8edfe473-b997-4987-a292-c8d5f1768ee5",
+      "product_id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "title": "Ergonomic",
+      "content": "Suadeo avarus iure porro apto sonitus. Conduco possimus libero asperiores auditor tenax defero adipiscor brevis vulgus. Statua assentator bellum placeat administratio ventus repellendus expedita spectaculum."
+    },
+    {
+      "id": "35a48d70-f5b7-4518-89c3-cc13311eeb45",
+      "product_id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "title": "Licensed",
+      "content": "Aliqua auctor capillus sophismata pax vulpes. Depereo cetera despecto caute advoco. Celer tenus cruentus via vesica suffragium."
+    },
+    {
+      "id": "7d774d2e-9566-4155-ad19-2a8f3bd2c283",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "title": "Information",
+      "content": "Viduo deripio corona abeo iure bonus tantillus adimpleo cohaero. Illum conicio degero super natus arx considero quasi possimus ascit. Sumo ceno cultellus votum sed vigilo demonstro currus."
+    },
+    {
+      "id": "a25c6ea1-1c51-40ab-8d40-45ec0ebd369e",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "title": "Awesome",
+      "content": "Vel damnatio eos viduo. Ea sui caecus tredecim. Aranea contra xiphias ducimus."
+    },
+    {
+      "id": "04f1a9e7-4ed9-4ab8-bae4-1e52e9b9a8f8",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "title": "Rustic",
+      "content": "Curto demitto ceno viridis vestigium verbera quasi tamen abutor. Damno appono patria absconditus vesper aetas. Apto colo utrum vorax dedico."
+    },
+    {
+      "id": "5815b28f-81b3-4c48-b123-9e8558aa3387",
+      "product_id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "title": "Information",
+      "content": "Demergo quasi accedo odit adeo. Virga libero tenuis volva vel compono. Vespillo vapulus colo celebrer rem vir ustilo tergo animi virgo."
+    },
+    {
+      "id": "68821016-4ea8-4c43-9946-f5d0b78fc911",
+      "product_id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "title": "Handmade",
+      "content": "Voluptas ascisco viduo thymum congregatio triumphus tam vado. Acquiro speculum arca verecundia. Terminatio tertius sollicito libero sto vulticulus solum totus curso placeat."
+    },
+    {
+      "id": "b7bda53f-b569-4f26-b151-068898dd8e31",
+      "product_id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "title": "Electronic",
+      "content": "Aestus vinum cado carmen sum aspernatur sed in. Xiphias conatus sub dedico. Benevolentia soleo vallum volubilis."
+    },
+    {
+      "id": "2896f17c-9869-4c97-b7ad-32d8201877bb",
+      "product_id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "title": "Information",
+      "content": "Amoveo ipsam arca suasoria aveho delinquo amaritudo. Deficio repellat uter vestigium assumenda capio tubineus. Dicta adeptio tricesimus."
+    },
+    {
+      "id": "61251a2e-3f52-4302-a2d0-187a2d441cfc",
+      "product_id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "title": "Luxurious",
+      "content": "Cuppedia caterva vomito accedo amaritudo viduo. Amplus solio abduco angelus. Appositus facilis enim adeo valetudo peccatus paens canto aliquid ab."
+    },
+    {
+      "id": "90489ad7-471d-4249-8613-b1fe1cdc2fa6",
+      "product_id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "title": "Small",
+      "content": "Vitium succedo vergo solum debeo. Unus utor aperio terga. Sustineo arca trans peior itaque coadunatio."
+    },
+    {
+      "id": "368bce39-1db6-4f9f-9684-25dcb6d45261",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "title": "Information",
+      "content": "Commemoro confero cur volaticus canto cur. Aveho quas delibero trans viscus ver. Volutabrum tepidus admoneo facilis odio bellicus confido verto comis."
+    },
+    {
+      "id": "f375a6de-cb7b-4342-ae58-404d2ca878ea",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "title": "Handmade",
+      "content": "Vestrum terreo unde cicuta curvo vix. Vacuus abduco rem vicinus. Canto nesciunt pecus verus ratione."
+    },
+    {
+      "id": "a819ab87-75f7-4cc1-bdbe-ed67feaaaed8",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "title": "Recycled",
+      "content": "Trado cubicularis incidunt desolo depereo celo usitas ipsa damnatio cura. Caveo utique crastinus curriculum triumphus peior cumque convoco explicabo. Ratione caute validus stabilis strues sui campana."
+    },
+    {
+      "id": "03b0da8a-2122-43c6-9473-33dad08cf74f",
+      "product_id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "title": "Information",
+      "content": "Aro iure sodalitas stillicidium sustineo adamo cauda vero capillus somniculosus. Adulatio vulticulus decipio advenio deorsum tot vicissitudo solitudo tyrannus solitudo. Delego vestigium truculenter corroboro cernuus pecco cura numquam ascisco apto."
+    },
+    {
+      "id": "d7070e87-3fa7-4d97-92ca-5dbe660f35fd",
+      "product_id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "title": "Modern",
+      "content": "Cura conor nulla. Magnam deripio ventosus. Valeo compono coadunatio crux caecus caterva volaticus contra vomica."
+    },
+    {
+      "id": "abb1a8ab-00d1-46b3-898a-5b71d592c792",
+      "product_id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "title": "Small",
+      "content": "Aduro natus terebro ustilo. Molestias sponte subvenio tricesimus quod vinum cedo conservo. Infit depopulo aufero victus aiunt dicta coadunatio teres."
+    },
+    {
+      "id": "e87f5fb9-7ce3-4486-9e0e-1ca493b658ad",
+      "product_id": "6c209d84-c56d-49b8-ade4-c253b45eefbd",
+      "title": "Information",
+      "content": "Tendo absens ipsum xiphias cohaero tristis eius. Reiciendis defessus cursim inflammatio thema amiculum creptio crudelis. Ipsum summopere audentia aiunt vilis agnosco arma deripio tardus vix."
+    },
+    {
+      "id": "56aa4aab-6ccd-4619-8b5b-974c569345c2",
+      "product_id": "6c209d84-c56d-49b8-ade4-c253b45eefbd",
+      "title": "Fantastic",
+      "content": "Carus brevis labore vitium crudelis adhuc caterva. Aurum deficio copiose decerno attonbitus. Delectatio baiulus contigo communis adeptio vobis audio."
+    },
+    {
+      "id": "9c4acb67-7cb6-4926-9c0f-070512eb0c98",
+      "product_id": "6c209d84-c56d-49b8-ade4-c253b45eefbd",
+      "title": "Bespoke",
+      "content": "Decens provident amplitudo derelinquo ascisco subnecto tempora causa tutamen explicabo. Agnitio adulatio aduro vix solum virga aggero capio supplanto. Tendo demum vito adversus itaque suffoco."
+    },
+    {
+      "id": "6c5c4a51-4a9b-4d77-83b5-eaecebe0169b",
+      "product_id": "2808458c-0f20-45b2-a0d0-17c5e6a8d18a",
+      "title": "Information",
+      "content": "Cursus terga patrocinor testimonium aequus maxime suscipio. Arto suadeo audacia adficio attero cultura cognatus defessus. Tego sint cursim rerum curso aut debeo decens clibanus adeptio."
+    },
+    {
+      "id": "a5e74603-7f73-4eff-b098-7538255b0cd6",
+      "product_id": "2808458c-0f20-45b2-a0d0-17c5e6a8d18a",
+      "title": "Practical",
+      "content": "Solutio explicabo ventito tabesco careo demo. Volup derideo voco absens porro capto taedium video administratio clam. Tabesco complectus angustus demergo ulciscor vitae sint urbs."
+    },
+    {
+      "id": "3ab2fa42-e8d6-41e4-a366-ebe4d3d3d2f2",
+      "product_id": "2808458c-0f20-45b2-a0d0-17c5e6a8d18a",
+      "title": "Generic",
+      "content": "A bellum caste delectus tersus. Demo vivo cohibeo. Spargo spargo tremo balbus quod depraedor contego arceo basium."
+    },
+    {
+      "id": "64e19300-f12b-48cc-bce1-5779c69ec155",
+      "product_id": "becda93e-cece-4210-af8c-65844a3e71bc",
+      "title": "Information",
+      "content": "Solium amita aduro torqueo acceptus versus odit officiis. Atque caecus quae torqueo tero deputo ventito. Verumtamen volva calamitas alias enim adinventitias comes teneo ea."
+    },
+    {
+      "id": "16798999-006c-4c61-986c-1b0c27c5dc80",
+      "product_id": "becda93e-cece-4210-af8c-65844a3e71bc",
+      "title": "Ergonomic",
+      "content": "Veritas viriliter credo solio contego certe. Utpote ter assumenda timidus nemo arca. Deripio aptus perspiciatis tamisium aqua cerno."
+    },
+    {
+      "id": "09a10f76-0b59-4a52-8f60-6f1a3ce60a12",
+      "product_id": "becda93e-cece-4210-af8c-65844a3e71bc",
+      "title": "Small",
+      "content": "Atque pariatur curis avarus. Desino arcesso spoliatio quisquam contabesco pel sublime. Officia subvenio error solium vobis averto ter amet."
+    },
+    {
+      "id": "1cae24d9-085d-4f84-9f48-3adba19dd597",
+      "product_id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "title": "Information",
+      "content": "Terminatio solum vespillo tribuo aqua solum temptatio. Conqueror avarus talio studio quo delectatio sto corpus. Aliqua tumultus vicissitudo."
+    },
+    {
+      "id": "f9e356bb-4aa4-4b21-ba6a-8d0af7d9054b",
+      "product_id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "title": "Handmade",
+      "content": "Speculum confero arcesso dapifer testimonium arma vaco. Possimus statua voluptates ceno. Cuius testimonium amaritudo vetus."
+    },
+    {
+      "id": "b9f9fd98-b4c9-45e0-96c4-cfac332d5353",
+      "product_id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "title": "Bespoke",
+      "content": "Confugo curso carbo sordeo vix valens ullam utilis itaque. Quam crebro adiuvo torqueo delectatio desino vapulus venio theologus tergo. Consequuntur adsuesco stips aetas sum cenaculum alter coaegresco defleo subito."
+    },
+    {
+      "id": "f1331c6e-65e2-4ec6-b5d9-720611bf2b35",
+      "product_id": "2776e8f4-001b-4da2-b5af-d587d19d990b",
+      "title": "Information",
+      "content": "Dolore tibi vulpes terror verbera peccatus comptus cicuta avarus. Consequatur turbo vindico velit centum crapula sopor thema cuius odit. Uberrime suffoco administratio."
+    },
+    {
+      "id": "22d303d4-410f-48b8-a203-31ddec432095",
+      "product_id": "2776e8f4-001b-4da2-b5af-d587d19d990b",
+      "title": "Incredible",
+      "content": "Ex curriculum territo decor creo cunae tandem nesciunt. Atque amplexus vereor debeo. Cogito audio creator averto vivo perspiciatis."
+    },
+    {
+      "id": "2b66933e-eacb-4db1-bea0-4d51567deb8d",
+      "product_id": "2776e8f4-001b-4da2-b5af-d587d19d990b",
+      "title": "Fantastic",
+      "content": "Canis architecto una taceo utrum curto vivo accendo aliqua. Vallum at assumenda. Inventore validus debilito sapiente ver tot thesaurus tristis."
+    }
+  ],
+  "orders": [
+    {
+      "id": "4554fc8d-6c86-4b0d-aebb-4da4df1eb680",
+      "user_id": "33279dad-c043-4e68-9147-bfdec7f01ec4",
+      "status": "done",
+      "payment_information": "3420-650066-65681",
+      "total": 585,
+      "created_at": "2023-09-13T03:58:45.162Z",
+      "updated_at": "2024-08-30T08:27:56.466Z"
+    },
+    {
+      "id": "02c1300b-b3d6-4d9e-874e-671677ca46b8",
+      "user_id": "574ed7e7-6087-48be-a158-7a41233ba50a",
+      "status": "paid",
+      "payment_information": "3489-615122-68446",
+      "total": 1388,
+      "created_at": "2024-01-17T22:09:26.907Z",
+      "updated_at": "2024-08-30T00:39:13.613Z"
+    },
+    {
+      "id": "18a3ea09-dc70-4efc-be87-da612a63cb15",
+      "user_id": "7013fbcc-0f93-4573-981b-ef925ec9e1a5",
+      "status": "done",
+      "payment_information": "5248-6917-2535-1594",
+      "total": 1780,
+      "created_at": "2023-09-28T04:40:14.595Z",
+      "updated_at": "2024-08-30T00:21:25.151Z"
+    },
+    {
+      "id": "13e232a4-b55b-4681-aee2-48de042387b7",
+      "user_id": "58ef6f9d-7262-4a0b-a393-d34ccc5586e5",
+      "status": "pending",
+      "payment_information": "3781-917285-34497",
+      "total": 826,
+      "created_at": "2024-06-16T06:36:08.796Z",
+      "updated_at": "2024-08-30T13:37:35.564Z"
+    },
+    {
+      "id": "2240a79a-5491-48e6-bd55-b051a59b5cf3",
+      "user_id": "58ef6f9d-7262-4a0b-a393-d34ccc5586e5",
+      "status": "paid",
+      "payment_information": "3562-6560-6891-7916",
+      "total": 1582,
+      "created_at": "2024-08-29T03:04:52.891Z",
+      "updated_at": "2024-08-29T20:45:12.939Z"
+    },
+    {
+      "id": "b0fe9471-74e9-4c94-9156-89d3848f8573",
+      "user_id": "33279dad-c043-4e68-9147-bfdec7f01ec4",
+      "status": "paid",
+      "payment_information": "6304-0361-6481-3119",
+      "total": 1601,
+      "created_at": "2024-07-30T01:02:11.994Z",
+      "updated_at": "2024-08-29T15:32:42.775Z"
+    },
+    {
+      "id": "d9f6b4f8-6c89-499b-9153-b70c8e1e0d5c",
+      "user_id": "329cb615-88e8-40de-a9d0-a161295c685b",
+      "status": "customer_canceled",
+      "payment_information": "4920622088735",
+      "total": 2090,
+      "created_at": "2023-12-07T05:01:34.804Z",
+      "updated_at": "2024-08-30T03:58:42.752Z"
+    },
+    {
+      "id": "066b130f-d292-43d2-8696-20c09950e752",
+      "user_id": "574ed7e7-6087-48be-a158-7a41233ba50a",
+      "status": "pending",
+      "payment_information": "5449-7447-5070-9025",
+      "total": 1755,
+      "created_at": "2024-08-11T00:28:21.437Z",
+      "updated_at": "2024-08-30T07:36:01.497Z"
+    },
+    {
+      "id": "6b302e5a-6f72-4b74-b543-50d4ee5cfe6f",
+      "user_id": "1cb4f3e1-1d7d-4728-9256-b4e5abbc6547",
+      "status": "pending",
+      "payment_information": "3653-719019-9744",
+      "total": 2712,
+      "created_at": "2024-05-04T10:55:38.400Z",
+      "updated_at": "2024-08-29T20:17:08.419Z"
+    },
+    {
+      "id": "5a0ce0ff-702d-4d15-a563-850cfbf8ca87",
+      "user_id": "33279dad-c043-4e68-9147-bfdec7f01ec4",
+      "status": "customer_canceled",
+      "payment_information": "5375-4256-9701-7791",
+      "total": 2429,
+      "created_at": "2023-12-16T19:43:12.807Z",
+      "updated_at": "2024-08-29T20:06:58.495Z"
+    }
+  ],
+  "order_items": [
+    {
+      "id": "8c3749fb-9f3a-482c-9ce6-483902592102",
+      "order_id": "4554fc8d-6c86-4b0d-aebb-4da4df1eb680",
+      "product_id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "quantity": 3,
+      "price": 585
+    },
+    {
+      "id": "af00fca3-47a3-48c5-9a51-4a7226d68b99",
+      "order_id": "02c1300b-b3d6-4d9e-874e-671677ca46b8",
+      "product_id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "quantity": 4,
+      "price": 408
+    },
+    {
+      "id": "d2bdde7b-2134-4d88-bc21-ee4cafc87aac",
+      "order_id": "02c1300b-b3d6-4d9e-874e-671677ca46b8",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "quantity": 5,
+      "price": 490
+    },
+    {
+      "id": "37fb0ed2-7c94-4e27-9fcf-83e699276f69",
+      "order_id": "02c1300b-b3d6-4d9e-874e-671677ca46b8",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "quantity": 5,
+      "price": 490
+    },
+    {
+      "id": "14d12bc1-2533-4a3a-a7ad-356f7c10336e",
+      "order_id": "18a3ea09-dc70-4efc-be87-da612a63cb15",
+      "product_id": "6c209d84-c56d-49b8-ade4-c253b45eefbd",
+      "quantity": 4,
+      "price": 1780
+    },
+    {
+      "id": "31fd9070-eb83-4d48-af1b-221ff934f589",
+      "order_id": "13e232a4-b55b-4681-aee2-48de042387b7",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "quantity": 1,
+      "price": 82
+    },
+    {
+      "id": "d13e804f-7dc3-4cf7-a6a4-0064921e64ff",
+      "order_id": "13e232a4-b55b-4681-aee2-48de042387b7",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "quantity": 4,
+      "price": 744
+    },
+    {
+      "id": "911d08a2-b0fd-41d0-b4fd-8b301acd7c07",
+      "order_id": "2240a79a-5491-48e6-bd55-b051a59b5cf3",
+      "product_id": "2776e8f4-001b-4da2-b5af-d587d19d990b",
+      "quantity": 3,
+      "price": 294
+    },
+    {
+      "id": "fccb2c07-73db-40ee-8f85-5ae2f1ae0ec3",
+      "order_id": "2240a79a-5491-48e6-bd55-b051a59b5cf3",
+      "product_id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "quantity": 1,
+      "price": 508
+    },
+    {
+      "id": "ac8cda6d-3338-470c-8a38-14f2f43164f7",
+      "order_id": "2240a79a-5491-48e6-bd55-b051a59b5cf3",
+      "product_id": "2ef25243-5081-411f-9e55-828219a6f97d",
+      "quantity": 4,
+      "price": 780
+    },
+    {
+      "id": "a9d5b018-e9ce-475b-88ed-7097d807a587",
+      "order_id": "b0fe9471-74e9-4c94-9156-89d3848f8573",
+      "product_id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "quantity": 3,
+      "price": 585
+    },
+    {
+      "id": "f5a0c10c-73db-4d2f-9c65-d26b3bc3467a",
+      "order_id": "b0fe9471-74e9-4c94-9156-89d3848f8573",
+      "product_id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "quantity": 2,
+      "price": 1016
+    },
+    {
+      "id": "17dc9adf-4d18-4c84-9101-732135b47be7",
+      "order_id": "d9f6b4f8-6c89-499b-9153-b70c8e1e0d5c",
+      "product_id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "quantity": 2,
+      "price": 1124
+    },
+    {
+      "id": "848b0bc1-90a7-4a58-b34e-1247a6f71713",
+      "order_id": "d9f6b4f8-6c89-499b-9153-b70c8e1e0d5c",
+      "product_id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "quantity": 1,
+      "price": 222
+    },
+    {
+      "id": "8423fa0b-f5df-4878-b59e-288ea210c75c",
+      "order_id": "d9f6b4f8-6c89-499b-9153-b70c8e1e0d5c",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "quantity": 4,
+      "price": 744
+    },
+    {
+      "id": "f58e4ebf-46b9-45ac-b592-073334ed4f4c",
+      "order_id": "066b130f-d292-43d2-8696-20c09950e752",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "quantity": 5,
+      "price": 410
+    },
+    {
+      "id": "9211315d-f2e6-4683-80f1-b6ad865e8db6",
+      "order_id": "066b130f-d292-43d2-8696-20c09950e752",
+      "product_id": "2ef25243-5081-411f-9e55-828219a6f97d",
+      "quantity": 5,
+      "price": 975
+    },
+    {
+      "id": "b9b72b16-aab2-4b6d-bd4e-0ff601e1351b",
+      "order_id": "066b130f-d292-43d2-8696-20c09950e752",
+      "product_id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "quantity": 5,
+      "price": 370
+    },
+    {
+      "id": "3f29c06b-9618-4928-aecf-19274f04277e",
+      "order_id": "6b302e5a-6f72-4b74-b543-50d4ee5cfe6f",
+      "product_id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "quantity": 3,
+      "price": 1686
+    },
+    {
+      "id": "b4a8234b-2afc-4f92-bb4f-2eb5f59726da",
+      "order_id": "6b302e5a-6f72-4b74-b543-50d4ee5cfe6f",
+      "product_id": "becda93e-cece-4210-af8c-65844a3e71bc",
+      "quantity": 4,
+      "price": 924
+    },
+    {
+      "id": "55e2a7ce-e4a4-416c-b61e-1fe7e02d210f",
+      "order_id": "6b302e5a-6f72-4b74-b543-50d4ee5cfe6f",
+      "product_id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "quantity": 1,
+      "price": 102
+    },
+    {
+      "id": "99c573d4-3121-442b-892f-749835c7ec12",
+      "order_id": "5a0ce0ff-702d-4d15-a563-850cfbf8ca87",
+      "product_id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "quantity": 1,
+      "price": 195
+    },
+    {
+      "id": "29723e3c-6093-4b0b-8f4f-890203f26a4f",
+      "order_id": "5a0ce0ff-702d-4d15-a563-850cfbf8ca87",
+      "product_id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "quantity": 2,
+      "price": 1124
+    },
+    {
+      "id": "92c947c9-ab86-484f-b062-214137b9d93d",
+      "order_id": "5a0ce0ff-702d-4d15-a563-850cfbf8ca87",
+      "product_id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "quantity": 5,
+      "price": 1110
+    }
+  ],
+  "carts": [
+    {
+      "id": "fa4e6f27-c512-4169-975a-7df6508bf6ba",
+      "user_id": "33279dad-c043-4e68-9147-bfdec7f01ec4",
+      "created_at": "2023-11-21T03:02:56.873Z",
+      "updated_at": "2024-08-30T14:02:22.197Z"
+    },
+    {
+      "id": "2114a48e-da1e-4fb9-b833-12fefabc6051",
+      "user_id": "1869d865-7cb8-4b73-9455-97fe0413c3d5",
+      "created_at": "2023-12-19T14:43:33.801Z",
+      "updated_at": "2024-08-29T15:48:17.064Z"
+    },
+    {
+      "id": "67944f00-6386-404a-87ed-ace129daa316",
+      "user_id": "7ba8b037-316e-4014-ad46-2608c447ac32",
+      "created_at": "2024-04-18T16:28:55.504Z",
+      "updated_at": "2024-08-30T02:10:05.541Z"
+    },
+    {
+      "id": "1c5f4680-016d-4956-9aa6-26e066db48d8",
+      "user_id": "7013fbcc-0f93-4573-981b-ef925ec9e1a5",
+      "created_at": "2024-06-01T19:41:11.881Z",
+      "updated_at": "2024-08-29T19:56:49.422Z"
+    },
+    {
+      "id": "cd48b884-da9b-4490-bca7-c7681592987e",
+      "user_id": "574ed7e7-6087-48be-a158-7a41233ba50a",
+      "created_at": "2024-08-15T12:58:06.034Z",
+      "updated_at": "2024-08-29T20:00:04.678Z"
+    }
+  ],
+  "cart_items": [
+    {
+      "id": "919166c3-3d4a-426d-a6ff-964d16fae4e2",
+      "cart_id": "fa4e6f27-c512-4169-975a-7df6508bf6ba",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "name": "Fantastic Concrete Pizza",
+      "image_url": "https://picsum.photos/seed/rW1nRu3pWf/640/480",
+      "price": "82",
+      "quantity": 6
+    },
+    {
+      "id": "7b308653-9801-4f5b-afbd-8a869ec9280c",
+      "cart_id": "fa4e6f27-c512-4169-975a-7df6508bf6ba",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "name": "Electronic Frozen Chicken",
+      "image_url": "https://picsum.photos/seed/8WcnBCgtbz/640/480",
+      "price": "98",
+      "quantity": 9
+    },
+    {
+      "id": "72019971-f008-4567-80c7-e7b8b373b401",
+      "cart_id": "fa4e6f27-c512-4169-975a-7df6508bf6ba",
+      "product_id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "name": "Refined Plastic Hat",
+      "image_url": "https://picsum.photos/seed/JZDzR/640/480",
+      "price": "102",
+      "quantity": 9
+    },
+    {
+      "id": "5156e71c-a959-4b0f-9934-fc54b002e94b",
+      "cart_id": "fa4e6f27-c512-4169-975a-7df6508bf6ba",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "name": "Incredible Bronze Table",
+      "image_url": "https://picsum.photos/seed/NIfOEl5xn/640/480",
+      "price": "186",
+      "quantity": 9
+    },
+    {
+      "id": "0a928924-d773-42d6-8e0c-a55db92348cf",
+      "cart_id": "fa4e6f27-c512-4169-975a-7df6508bf6ba",
+      "product_id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "name": "Bespoke Wooden Hat",
+      "image_url": "https://picsum.photos/seed/JZ1f17qgkC/640/480",
+      "price": "222",
+      "quantity": 5
+    },
+    {
+      "id": "90fd2256-407d-49a3-a9bc-c466afd86cbb",
+      "cart_id": "2114a48e-da1e-4fb9-b833-12fefabc6051",
+      "product_id": "ec115b7e-a9d6-48a3-b2aa-81261d82b71a",
+      "name": "Bespoke Wooden Hat",
+      "image_url": "https://picsum.photos/seed/JZ1f17qgkC/640/480",
+      "price": "222",
+      "quantity": 3
+    },
+    {
+      "id": "d8b691d5-5d0a-4a1e-ba08-5129b9118ce6",
+      "cart_id": "2114a48e-da1e-4fb9-b833-12fefabc6051",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "name": "Fantastic Concrete Pizza",
+      "image_url": "https://picsum.photos/seed/rW1nRu3pWf/640/480",
+      "price": "82",
+      "quantity": 3
+    },
+    {
+      "id": "eb7214e3-a1c1-421b-8c71-769c19ea70fc",
+      "cart_id": "2114a48e-da1e-4fb9-b833-12fefabc6051",
+      "product_id": "2776e8f4-001b-4da2-b5af-d587d19d990b",
+      "name": "Electronic Plastic Table",
+      "image_url": "https://picsum.photos/seed/51s5qDnR1/640/480",
+      "price": "98",
+      "quantity": 9
+    },
+    {
+      "id": "e1d4da0b-b788-4b6a-b428-32f0ce974985",
+      "cart_id": "2114a48e-da1e-4fb9-b833-12fefabc6051",
+      "product_id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "name": "Elegant Bronze Bike",
+      "image_url": "https://picsum.photos/seed/GrR6zUn22P/640/480",
+      "price": "74",
+      "quantity": 4
+    },
+    {
+      "id": "f35c2236-83a3-4305-bcbf-833bd926490f",
+      "cart_id": "2114a48e-da1e-4fb9-b833-12fefabc6051",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "name": "Incredible Bronze Table",
+      "image_url": "https://picsum.photos/seed/NIfOEl5xn/640/480",
+      "price": "186",
+      "quantity": 6
+    },
+    {
+      "id": "1e155093-0ed6-438b-b615-2115b6a401f8",
+      "cart_id": "67944f00-6386-404a-87ed-ace129daa316",
+      "product_id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "name": "Elegant Bronze Bike",
+      "image_url": "https://picsum.photos/seed/GrR6zUn22P/640/480",
+      "price": "74",
+      "quantity": 5
+    },
+    {
+      "id": "5cb3c112-59be-40e8-8b81-c9ee24a56b82",
+      "cart_id": "67944f00-6386-404a-87ed-ace129daa316",
+      "product_id": "2776e8f4-001b-4da2-b5af-d587d19d990b",
+      "name": "Electronic Plastic Table",
+      "image_url": "https://picsum.photos/seed/51s5qDnR1/640/480",
+      "price": "98",
+      "quantity": 6
+    },
+    {
+      "id": "dee751f3-e02d-42de-9523-a311de0f621a",
+      "cart_id": "67944f00-6386-404a-87ed-ace129daa316",
+      "product_id": "2ef25243-5081-411f-9e55-828219a6f97d",
+      "name": "Refined Soft Bacon",
+      "image_url": "https://picsum.photos/seed/JE0bK5Jsjg/640/480",
+      "price": "195",
+      "quantity": 6
+    },
+    {
+      "id": "fa517405-7c86-4115-a939-ae26d74b47f9",
+      "cart_id": "67944f00-6386-404a-87ed-ace129daa316",
+      "product_id": "94983654-8dc0-4b0a-b02e-8c385de9ff7b",
+      "name": "Incredible Bronze Table",
+      "image_url": "https://picsum.photos/seed/NIfOEl5xn/640/480",
+      "price": "186",
+      "quantity": 3
+    },
+    {
+      "id": "f24d6c30-3fea-4735-852e-5d0159bdc8f2",
+      "cart_id": "67944f00-6386-404a-87ed-ace129daa316",
+      "product_id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "name": "Small Bronze Chair",
+      "image_url": "https://picsum.photos/seed/325LRbrlj/640/480",
+      "price": "508",
+      "quantity": 8
+    },
+    {
+      "id": "43bc8759-83bd-4f73-bc85-de7b6643d144",
+      "cart_id": "1c5f4680-016d-4956-9aa6-26e066db48d8",
+      "product_id": "e5325196-c09a-47b1-b56a-f20c7d1f9283",
+      "name": "Small Bronze Chair",
+      "image_url": "https://picsum.photos/seed/325LRbrlj/640/480",
+      "price": "508",
+      "quantity": 6
+    },
+    {
+      "id": "4f52dfdf-f121-44a4-add7-77185fb90bf7",
+      "cart_id": "1c5f4680-016d-4956-9aa6-26e066db48d8",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "name": "Fantastic Concrete Pizza",
+      "image_url": "https://picsum.photos/seed/rW1nRu3pWf/640/480",
+      "price": "82",
+      "quantity": 1
+    },
+    {
+      "id": "c770cc4c-1b35-4741-b54c-88cda19e09a2",
+      "cart_id": "1c5f4680-016d-4956-9aa6-26e066db48d8",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "name": "Electronic Frozen Chicken",
+      "image_url": "https://picsum.photos/seed/8WcnBCgtbz/640/480",
+      "price": "98",
+      "quantity": 10
+    },
+    {
+      "id": "227f422d-e019-47dd-8b9a-21e169468aa7",
+      "cart_id": "1c5f4680-016d-4956-9aa6-26e066db48d8",
+      "product_id": "dbfdd893-047b-4a0a-8974-54529a65604b",
+      "name": "Elegant Bronze Bike",
+      "image_url": "https://picsum.photos/seed/GrR6zUn22P/640/480",
+      "price": "74",
+      "quantity": 3
+    },
+    {
+      "id": "7fa533d0-6c61-4859-990f-70bbfcdcede7",
+      "cart_id": "1c5f4680-016d-4956-9aa6-26e066db48d8",
+      "product_id": "86bbfca8-6174-4f43-bafc-8b67abe25481",
+      "name": "Modern Frozen Table",
+      "image_url": "https://picsum.photos/seed/obW0r/640/480",
+      "price": "562",
+      "quantity": 10
+    },
+    {
+      "id": "1ef1883c-f2aa-47a8-8b51-242aa58436e1",
+      "cart_id": "cd48b884-da9b-4490-bca7-c7681592987e",
+      "product_id": "ddc2194b-ad68-4ef9-b7c1-5e28c1dabc42",
+      "name": "Fantastic Concrete Pizza",
+      "image_url": "https://picsum.photos/seed/rW1nRu3pWf/640/480",
+      "price": "82",
+      "quantity": 3
+    },
+    {
+      "id": "8bb5e500-bcc2-4685-a836-c1a01e128c03",
+      "cart_id": "cd48b884-da9b-4490-bca7-c7681592987e",
+      "product_id": "08796afb-e077-43b1-8127-79775898f2e8",
+      "name": "Electronic Frozen Chicken",
+      "image_url": "https://picsum.photos/seed/8WcnBCgtbz/640/480",
+      "price": "98",
+      "quantity": 4
+    },
+    {
+      "id": "9a414672-495c-4356-9a64-b4d3b6cc4dfc",
+      "cart_id": "cd48b884-da9b-4490-bca7-c7681592987e",
+      "product_id": "2808458c-0f20-45b2-a0d0-17c5e6a8d18a",
+      "name": "Fantastic Granite Ball",
+      "image_url": "https://picsum.photos/seed/i2p6NDfI/640/480",
+      "price": "232",
+      "quantity": 1
+    },
+    {
+      "id": "e73a5a4c-771f-4d57-8d9c-024073f44e1d",
+      "cart_id": "cd48b884-da9b-4490-bca7-c7681592987e",
+      "product_id": "4df07598-fc5f-4164-b65e-e99cf646a515",
+      "name": "Refined Plastic Hat",
+      "image_url": "https://picsum.photos/seed/JZDzR/640/480",
+      "price": "102",
+      "quantity": 5
+    },
+    {
+      "id": "f3d2809d-decb-44f2-bea9-56b47ad38f66",
+      "cart_id": "cd48b884-da9b-4490-bca7-c7681592987e",
+      "product_id": "7dd0d2a4-8811-40a0-9eb5-57393bd4ade0",
+      "name": "Luxurious Bronze Computer",
+      "image_url": "https://picsum.photos/seed/ir2q2RAWC/640/480",
+      "price": "195",
+      "quantity": 7
+    }
+  ]
+}

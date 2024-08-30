@@ -44,7 +44,8 @@ function processJsonFile(filePath) {
 
 
 // Usage
-const filePath = path.join(__dirname, '../generatedData/fakeData3.json');
+
+const filePath = path.join(__dirname, './fakeData/fakeData.json');
 
 const { tableNames, jsonData } = processJsonFile(filePath);
 const insertQueries = tableNames.flatMap(tableName => passData(jsonData, tableName));
@@ -52,7 +53,7 @@ const insertQueries = tableNames.flatMap(tableName => passData(jsonData, tableNa
 // insertQueries.forEach(query => console.log(query));
 
 // Write queries to a text file
-const outputFilePath = path.join(__dirname, '../outputFiles/insertQueries3.sql');
+const outputFilePath = path.join(__dirname, './fakeData/insertQueries.sql');
 fs.writeFileSync(outputFilePath, insertQueries.join('\n'), 'utf8');
 
 console.log(`Insert queries have been written to ${outputFilePath}`);

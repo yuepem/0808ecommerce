@@ -9,7 +9,7 @@ const addresses = [];
 const accounts = [];
 const categories = [];
 const products = [];
-const accordion_items = [];
+const accordionItems = [];
 const orders = [];
 const order_items = [];
 const carts = [];
@@ -30,7 +30,8 @@ for (let i = 0; i < 10; i++) {
   const userId = generateUUID();
   const user = {
     id: userId,
-    name: faker.person.firstName(),
+    first_name: faker.person.firstName(),
+    last_name: faker.person.lastName(),
     phone_number: faker.phone.number(),
     email: faker.internet.email(),
     password_hash: faker.internet.password(),
@@ -40,58 +41,70 @@ for (let i = 0; i < 10; i++) {
   users.push(user);
 
   const address = {
-    id: addressIdCounter++,
-    street: faker.location.streetAddress(),
-    city: faker.location.city(),
-    state: faker.location.state(),
-    zip_code: faker.location.zipCode(),
+    id: generateUUID(),
     user_id: userId,
-    created_at: faker.date.past(),
-    updated_at: faker.date.recent(),
+    street_address: faker.location.streetAddress(),
+    city: faker.location.city(),
+    province: faker.location.state(),
+    postal_code: faker.location.zipCode(),
   };
   addresses.push(address);
 }
 
-// Generate Categories and Products
+// Generate Categories and Products, and Accordion Items
 for (let i = 0; i < 5; i++) {
   const categoryId = categoryIdCounter++;
   const category = {
     id: categoryId,
     name: faker.commerce.department(),
+    image_url: faker.image.urlPicsumPhotos(),
     description: faker.commerce.productDescription(),
   };
   categories.push(category);
 
-  for (let j = 0; j < 10; j++) {
-    const productId = productIdCounter++;
+  for (let j = 0; j < 3; j++) {
+    const productId = generateUUID();
     const product = {
       id: productId,
       name: faker.commerce.productName(),
       description: faker.commerce.productDescription(),
-      price: faker.commerce.price({min: 35, max: 600}),
+      price: faker.commerce.price({ min: 30, max: 600, dec: 0 }),
       stock: faker.number.int({ min: 1, max: 100 }),
       category_id: categoryId,
+      image_url: faker.image.urlPicsumPhotos(),
       created_at: faker.date.past(),
       updated_at: faker.date.recent(),
     };
     products.push(product);
+
+    for (let j = 0; j < 3; j++) { // Generate 3 accordion items for each product
+      const accordionItemId = generateUUID();
+      const accordionItem = {
+        id: accordionItemId,
+        product_id: productId,
+        title: j === 0 ? 'Information' : faker.commerce.productAdjective({min:2, max:5}), // Set first title to 'Information'
+        content: faker.lorem.paragraph(),
+      };
+      accordionItems.push(accordionItem);
+    }
+
   }
 }
 
 // Helper function to generate fake order items and calculate total price
 function createFakeOrderItems(orderId) {
-  const numberOfOrderItems = faker.number.int({ min: 1, max: 5 });
+  const numberOfOrderItems = faker.number.int({ min: 1, max: 3 });
   let totalPrice = 0;
   const items = [];
 
   for (let i = 0; i < numberOfOrderItems; i++) {
     const product = faker.helpers.arrayElement(products);
-    const quantity = faker.number.int({ min: 1, max: 6 });
+    const quantity = faker.number.int({ min: 1, max: 5 });
     const price = product.price * quantity;
     totalPrice += price;
 
     items.push({
-      id: orderItemIdCounter++,
+      id: generateUUID(),
       order_id: orderId,
       product_id: product.id,
       quantity: quantity,
@@ -112,6 +125,7 @@ for (let i = 0; i < 10; i++) {
     id: orderId,
     user_id: userId,
     status: faker.helpers.arrayElement(['pending', 'paid', 'done', 'customer_canceled']),
+    payment_information:  faker.finance.creditCardNumber(),
     total: totalPrice,
     created_at: faker.date.past(),
     updated_at: faker.date.recent(),
@@ -138,11 +152,13 @@ for (let i = 0; i < 5; i++) {
     const quantity = faker.number.int({ min: 1, max: 10 });
 
     const cartItem = {
-      id: cartItemIdCounter++,
+      id: generateUUID(),
       cart_id: cartId,
       product_id: product.id,
+      name: product.name,
+      image_url: product.image_url,
+      price: product.price,
       quantity: quantity,
-      added_at: faker.date.recent(),
     };
     cart_items.push(cartItem);
   }
@@ -155,16 +171,18 @@ for (let i = 0; i < 10; i++) {
   const account = {
     id: accountId,
     user_id: userId,
-    type: faker.helpers.arrayElement(['user', 'admin']),
-    provider: faker.company.name(),
-    provider_account_id: faker.string.uuid(),
-    refresh_token: faker.internet.password(),
+    account_type: faker.helpers.arrayElement(['User', 'Admin']),
+    auth_provider: faker.company.name(),
+    provider_accountId: faker.string.uuid(),
     access_token: faker.internet.password(),
-    expires_at: faker.date.future(),
+    refresh_token: faker.internet.password(),
     token_type: faker.string.nanoid(),
     scope: faker.string.alpha(10),
     id_token: faker.internet.password(),
     session_state: faker.string.alpha(10),
+    created_at: faker.date.past(),
+    expires_at: faker.date.future(),
+    updated_at: faker.date.recent(),
   };
   accounts.push(account);
 }
@@ -175,16 +193,18 @@ console.log("Addresses:", addresses.length);
 console.log("Accounts:", accounts.length);
 console.log("Categories:", categories.length);
 console.log("Products:", products.length);
+console.log("Accordion Items:", accordionItems.length);
 console.log("Orders:", orders.length);
 console.log("Order Items:", order_items.length);
 console.log("Carts:", carts.length);
 console.log("Cart Items:", cart_items.length);
 
+
 console.log("Printed data to console,Staring to write to JSON file");
 
 
 // Write generated data to JSON files
-fs.writeFileSync('../generatedData/fakeData3.json', JSON.stringify({users, addresses, accounts, categories, products, accordion_items, orders, order_items, carts, cart_items}, null, 2), (err) => {
+fs.writeFileSync('./fakeData/fakeData.json', JSON.stringify({ users, addresses, accounts, categories, products, accordionItems, orders, order_items, carts, cart_items }, null, 2), (err) => {
   if (err) {
     console.error(err);
   }
