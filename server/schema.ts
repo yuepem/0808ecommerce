@@ -1,4 +1,4 @@
-import { pgTable, serial, uuid, text, timestamp, integer, pgEnum } from 'drizzle-orm/pg-core';
+import { pgTable, serial, uuid, text, timestamp, integer, pgEnum, PgSerial } from 'drizzle-orm/pg-core';
 import { not, relations } from 'drizzle-orm';
 
 
@@ -13,10 +13,10 @@ export const accountTypeEnum = pgEnum('account_type', ['Admin', 'User']);
   ! categories id: serial
   * products id: uuid
   * accordion_items id: uuid
-  ! orders id: text  -->  id = Date.now().toString();
+  * orders id: uuid
   * order_items id: uuid
   * carts id: uuid
-  ! cart_items id: text -->  id = Date.now().toString(); user id last 4 digits + id 
+  8 cart_items id: uuid
 */
 
 //  Users table
@@ -47,7 +47,7 @@ export const accounts = pgTable('accounts', {
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
   accountType: accountTypeEnum('account_type').default('User').notNull(),
   authProvider: text('auth_provider'),
-  providerAccountId: text('provider_accountId'),
+  providerAccountId: text('provider_account_id'),
   accessToken: text('access_token'),
   refreshToken: text('refresh_token'),
   tokenType: text('token_type'),
@@ -64,9 +64,10 @@ export const categories = pgTable('categories', {
   id: serial('id').primaryKey(),
   name: text('name').notNull().unique(),
   description: text('description'),
+  imageUrl: text('image_url').notNull(),
 });
 
-//  Products table
+//  Products table 
 export const products = pgTable('products', {
   id: uuid('id').primaryKey().defaultRandom(),
   name: text('name').notNull().unique(),
@@ -96,7 +97,7 @@ export const carts = pgTable('carts', {
 });
 
 // Cart items table
-export const cartItems = pgTable('cartItems', {
+export const cartItems = pgTable('cart_items', {
   id: uuid('id').primaryKey().defaultRandom(),
   cartId: uuid('cart_id').references(() => carts.id, { onDelete: 'cascade' }).notNull(),
   productId: uuid('product_id').references(() => products.id, { onDelete: 'cascade' }).notNull(),
@@ -116,7 +117,7 @@ export const orders = pgTable('orders', {
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
 
-export const orderItems = pgTable('orderItems', {
+export const orderItems = pgTable('order_items', {
   id: uuid('id').primaryKey().defaultRandom(),
   orderId: uuid('order_id').references(() => orders.id, { onDelete: 'cascade' }).notNull(),
   productId: uuid('product_id').references(() => products.id).notNull(),

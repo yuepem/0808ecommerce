@@ -1,5 +1,5 @@
 {
-  "id": "99c5fae8-32de-4e97-be00-77e040771c4c",
+  "id": "f29fe1b3-702e-43fe-bfb3-e83c4f0d2cec",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -84,8 +84,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "provider_accountId": {
-          "name": "provider_accountId",
+        "provider_account_id": {
+          "name": "provider_account_id",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -227,8 +227,8 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "public.cartItems": {
-      "name": "cartItems",
+    "public.cart_items": {
+      "name": "cart_items",
       "schema": "",
       "columns": {
         "id": {
@@ -277,9 +277,9 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "cartItems_cart_id_carts_id_fk": {
-          "name": "cartItems_cart_id_carts_id_fk",
-          "tableFrom": "cartItems",
+        "cart_items_cart_id_carts_id_fk": {
+          "name": "cart_items_cart_id_carts_id_fk",
+          "tableFrom": "cart_items",
           "tableTo": "carts",
           "columnsFrom": [
             "cart_id"
@@ -290,9 +290,9 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "cartItems_product_id_products_id_fk": {
-          "name": "cartItems_product_id_products_id_fk",
-          "tableFrom": "cartItems",
+        "cart_items_product_id_products_id_fk": {
+          "name": "cart_items_product_id_products_id_fk",
+          "tableFrom": "cart_items",
           "tableTo": "products",
           "columnsFrom": [
             "product_id"
@@ -364,7 +364,7 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "serial",
           "primaryKey": true,
           "notNull": true
         },
@@ -379,6 +379,12 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
+        },
+        "image_url": {
+          "name": "image_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
         }
       },
       "indexes": {},
@@ -394,15 +400,16 @@
         }
       }
     },
-    "public.orderItems": {
-      "name": "orderItems",
+    "public.order_items": {
+      "name": "order_items",
       "schema": "",
       "columns": {
         "id": {
           "name": "id",
-          "type": "text",
+          "type": "uuid",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "default": "gen_random_uuid()"
         },
         "order_id": {
           "name": "order_id",
@@ -443,9 +450,9 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "orderItems_order_id_orders_id_fk": {
-          "name": "orderItems_order_id_orders_id_fk",
-          "tableFrom": "orderItems",
+        "order_items_order_id_orders_id_fk": {
+          "name": "order_items_order_id_orders_id_fk",
+          "tableFrom": "order_items",
           "tableTo": "orders",
           "columnsFrom": [
             "order_id"
@@ -456,9 +463,9 @@
           "onDelete": "cascade",
           "onUpdate": "no action"
         },
-        "orderItems_product_id_products_id_fk": {
-          "name": "orderItems_product_id_products_id_fk",
-          "tableFrom": "orderItems",
+        "order_items_product_id_products_id_fk": {
+          "name": "order_items_product_id_products_id_fk",
+          "tableFrom": "order_items",
           "tableTo": "products",
           "columnsFrom": [
             "product_id"
@@ -710,7 +717,26 @@
       }
     }
   },
-  "enums": {},
+  "enums": {
+    "public.account_type": {
+      "name": "account_type",
+      "schema": "public",
+      "values": [
+        "Admin",
+        "User"
+      ]
+    },
+    "public.order_status": {
+      "name": "order_status",
+      "schema": "public",
+      "values": [
+        "Pending",
+        "Paid",
+        "Done",
+        "Cancelled"
+      ]
+    }
+  },
   "schemas": {},
   "sequences": {},
   "_meta": {

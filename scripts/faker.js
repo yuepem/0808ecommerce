@@ -9,7 +9,7 @@ const addresses = [];
 const accounts = [];
 const categories = [];
 const products = [];
-const accordionItems = [];
+const accordion_items = [];
 const orders = [];
 const order_items = [];
 const carts = [];
@@ -57,12 +57,12 @@ for (let i = 0; i < 5; i++) {
   const category = {
     id: categoryId,
     name: faker.commerce.department(),
-    image_url: faker.image.urlPicsumPhotos(),
     description: faker.commerce.productDescription(),
+    image_url: faker.image.urlPicsumPhotos(),
   };
   categories.push(category);
 
-  for (let j = 0; j < 3; j++) {
+  for (let j = 0; j < 5; j++) {
     const productId = generateUUID();
     const product = {
       id: productId,
@@ -77,7 +77,7 @@ for (let i = 0; i < 5; i++) {
     };
     products.push(product);
 
-    for (let j = 0; j < 3; j++) { // Generate 3 accordion items for each product
+    for (let j = 0; j < 2; j++) { // Generate 2 accordion items for each product
       const accordionItemId = generateUUID();
       const accordionItem = {
         id: accordionItemId,
@@ -85,7 +85,7 @@ for (let i = 0; i < 5; i++) {
         title: j === 0 ? 'Information' : faker.commerce.productAdjective({min:2, max:5}), // Set first title to 'Information'
         content: faker.lorem.paragraph(),
       };
-      accordionItems.push(accordionItem);
+      accordion_items.push(accordionItem);
     }
 
   }
@@ -107,8 +107,10 @@ function createFakeOrderItems(orderId) {
       id: generateUUID(),
       order_id: orderId,
       product_id: product.id,
-      quantity: quantity,
+      name: product.name,
+      image_url: product.image_url,
       price: price,
+      quantity: quantity,
     });
   }
 
@@ -124,9 +126,9 @@ for (let i = 0; i < 10; i++) {
   const order = {
     id: orderId,
     user_id: userId,
-    status: faker.helpers.arrayElement(['pending', 'paid', 'done', 'customer_canceled']),
+    status: faker.helpers.arrayElement(['Pending', 'Paid', 'Done', 'Canceled']),
     payment_information:  faker.finance.creditCardNumber(),
-    total: totalPrice,
+    total_price: totalPrice,
     created_at: faker.date.past(),
     updated_at: faker.date.recent(),
   };
@@ -173,7 +175,7 @@ for (let i = 0; i < 10; i++) {
     user_id: userId,
     account_type: faker.helpers.arrayElement(['User', 'Admin']),
     auth_provider: faker.company.name(),
-    provider_accountId: faker.string.uuid(),
+    provider_account_id: faker.string.uuid(),
     access_token: faker.internet.password(),
     refresh_token: faker.internet.password(),
     token_type: faker.string.nanoid(),
@@ -193,7 +195,7 @@ console.log("Addresses:", addresses.length);
 console.log("Accounts:", accounts.length);
 console.log("Categories:", categories.length);
 console.log("Products:", products.length);
-console.log("Accordion Items:", accordionItems.length);
+console.log("Accordion Items:", accordion_items.length);
 console.log("Orders:", orders.length);
 console.log("Order Items:", order_items.length);
 console.log("Carts:", carts.length);
@@ -204,7 +206,7 @@ console.log("Printed data to console,Staring to write to JSON file");
 
 
 // Write generated data to JSON files
-fs.writeFileSync('./fakeData/fakeData.json', JSON.stringify({ users, addresses, accounts, categories, products, accordionItems, orders, order_items, carts, cart_items }, null, 2), (err) => {
+fs.writeFileSync('./fakeData/fakeData.json', JSON.stringify({ users, addresses, accounts, categories, products, accordion_items, orders, order_items, carts, cart_items }, null, 2), (err) => {
   if (err) {
     console.error(err);
   }
