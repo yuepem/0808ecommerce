@@ -6,8 +6,7 @@ This is a full-stack project built with Next.js and TypeScript. It is designed f
 
 Additionally, the project is built with a strong emphasis on performance and scalability, utilizing Next.js for server-side rendering and optimized loading times. The backend is powered by a REST API, providing a flexible and efficient way to manage data interactions. With Drizzle-ORM and PostgreSQL, the project ensures reliable data storage and retrieval, making it suitable for handling a growing catalog of products and user transactions.
  -->
-### Cart on home page
-![Cart on home page](./public/cart.png)
+
 
 ### Product details page
 ![Product details page](./public/productDetailPage.png)
