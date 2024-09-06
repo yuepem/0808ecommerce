@@ -5,9 +5,9 @@ import { eq } from "drizzle-orm";
 
 // GET /api/v1/carts/:id ==> retrieve a cart by id
 
-export const GET = async ({ params} : any) => {
+export const GET = async (req: any, { params} : any) => {
     try {
-        const { id } = params;
+        const id = params?.id || req.nextUrl?.searchParams?.get("id");
         const results = await db.select().from(carts).where(eq(carts.id, id));
         return results.length > 0
             ? sendResponse(200, results)
