@@ -6,6 +6,7 @@ import google from "next-auth/providers/google";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
     adapter: DrizzleAdapter(db),
+    secret: process.env.AUTH_SECRET,
     session: {
         strategy: "jwt"
     },
