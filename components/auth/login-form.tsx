@@ -38,7 +38,7 @@ export default function LoginForm() {
   return (
     <AuthCard
       cardTitle="Welcome back"
-      backButtonHref="./api/auth/v1/signin"
+      backButtonHref="./api/v1/auth/signin"
       backButtonLabel="Create an account"
       showSocials={true}
     >
@@ -88,7 +88,7 @@ export default function LoginForm() {
                 <Link href="/auth/reset">Forgot your password?</Link>
               </Button>
             </div>
-            <Button type="submit" className="my-5 w-full" bg-green-500>
+            <Button type="submit" className="my-5 w-full" >
               {"Login"}
             </Button>
           </form>

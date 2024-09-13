@@ -1,6 +1,8 @@
 import { pgTable, serial, uuid, text, timestamp, integer, pgEnum, PgSerial } from 'drizzle-orm/pg-core';
 import { not, relations } from 'drizzle-orm';
 
+import type { AdapterAccountType } from 'next-auth/adapters';
+
 
 //  Define ENUMs
 export const orderStatusEnum = pgEnum('order_status', ['Pending', 'Paid', 'Done', 'Cancelled']);
@@ -20,19 +22,19 @@ export const accountTypeEnum = pgEnum('account_type', ['Admin', 'User']);
 */
 
 //  Users table
-export const users = pgTable('users', {
+export const users = pgTable('user', {
   id: uuid('id').primaryKey().defaultRandom(), 
   firstName: text('first_name').notNull(),
   lastName: text('last_name'),
   phoneNumber: text('phone_number').notNull().unique(),
   email: text('email').unique(),
-  passwordHash: text('password_hash').notNull(),
+  passwordHash: text('password_hash'),
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
 
 // Addresses table
-export const addresses = pgTable('addresses', {
+export const addresses = pgTable('address', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
   streetAddress: text('street_address').notNull(),
@@ -42,10 +44,10 @@ export const addresses = pgTable('addresses', {
 });
 
 //  Accounts table
-export const accounts = pgTable('accounts', {
+export const accounts = pgTable('account', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
-  accountType: accountTypeEnum('account_type').default('User').notNull(),
+  accountType: text('account_type').$type<AdapterAccountType>().notNull(), // Corrected method chaining
   authProvider: text('auth_provider'),
   providerAccountId: text('provider_account_id'),
   accessToken: text('access_token'),
@@ -60,7 +62,7 @@ export const accounts = pgTable('accounts', {
 });
 
 // Categories table
-export const categories = pgTable('categories', {
+export const categories = pgTable('category', {
   id: serial('id').primaryKey(),
   name: text('name').notNull().unique(),
   description: text('description'),
@@ -68,7 +70,7 @@ export const categories = pgTable('categories', {
 });
 
 //  Products table 
-export const products = pgTable('products', {
+export const products = pgTable('product', {
   id: uuid('id').primaryKey().defaultRandom(),
   name: text('name').notNull().unique(),
   description: text('description'),
@@ -81,7 +83,7 @@ export const products = pgTable('products', {
 });
 
 //  Accordion items table
-export const accordionItems = pgTable('accordion_items', {
+export const accordionItems = pgTable('accordion_item', {
   id: uuid('id').primaryKey().defaultRandom(),
   productId: uuid('product_id').references(() => products.id, { onDelete: 'cascade' }).notNull(),
   title: text('title').notNull(),
@@ -89,7 +91,7 @@ export const accordionItems = pgTable('accordion_items', {
 });
 
 //  Carts table
-export const carts = pgTable('carts', {
+export const carts = pgTable('cart', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
   createdAt: timestamp('created_at').notNull().defaultNow(),
@@ -97,7 +99,7 @@ export const carts = pgTable('carts', {
 });
 
 // Cart items table
-export const cartItems = pgTable('cart_items', {
+export const cartItems = pgTable('cart_item', {
   id: uuid('id').primaryKey().defaultRandom(),
   cartId: uuid('cart_id').references(() => carts.id, { onDelete: 'cascade' }).notNull(),
   productId: uuid('product_id').references(() => products.id, { onDelete: 'cascade' }).notNull(),
@@ -107,7 +109,7 @@ export const cartItems = pgTable('cart_items', {
   quantity: integer('quantity').notNull(),
 });
 
-export const orders = pgTable('orders', {
+export const orders = pgTable('order', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'cascade' }).notNull(),
   status: orderStatusEnum('status').default('Pending').notNull(),
@@ -117,7 +119,7 @@ export const orders = pgTable('orders', {
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
 });
 
-export const orderItems = pgTable('order_items', {
+export const orderItems = pgTable('order_item', {
   id: uuid('id').primaryKey().defaultRandom(),
   orderId: uuid('order_id').references(() => orders.id, { onDelete: 'cascade' }).notNull(),
   productId: uuid('product_id').references(() => products.id).notNull(),
@@ -132,7 +134,7 @@ export const orderItems = pgTable('order_items', {
 
 export const usersRelations = relations(users, ({ many, one }) => ({
   addresses: many(addresses),
-  accounts: many(accounts),
+  // accounts: many(accounts),
   carts: one(carts, { fields: [users.id], references: [carts.userId] }),
   orders: many(orders),
 }));
@@ -185,12 +187,12 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
     }),
   }));
 
-  export const accountsRelations = relations(accounts, ({ one }) => ({
+  /* export const accountsRelations = relations(accounts, ({ one }) => ({
     user: one(users, {
       fields: [accounts.userId],
       references: [users.id],
     }),
-  }));
+  })); */
 
   export const addressesRelations = relations(addresses, ({ many }) => ({
     user: many(users),

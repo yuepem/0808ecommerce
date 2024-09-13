@@ -11,7 +11,7 @@ export default async function UserProfileWithAuth() {
   const session = await auth();
 
   return (
-    <div>
+    <div>cursor
       {!session ? (
         <div className=" px-10">
           <div>
